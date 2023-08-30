@@ -29,9 +29,12 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>test_my_site</title>
+    <title>我的第一篇博客</title>
     <url>/2023/08/20/test-my-site/</url>
     <content><![CDATA[
 ]]></content>
+      <tags>
+        <tag>-前言</tag>
+      </tags>
   </entry>
 </search>
