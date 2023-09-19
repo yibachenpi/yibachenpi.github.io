@@ -36,36 +36,68 @@ id="用c语言实现一种迭代版本的简单乘法">用C语言实现一种迭
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">multiply</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (b) &#123;</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">1</span>) sum += a;</span><br><span class="line">		a &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">multiply</span>(a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2
 id="给出定理1.1除法算法的完整证明">给出定理1.1(除法算法)的完整证明</h2>
-<p>1、证明r&lt;b:运用反证法，如果r&gt;b，设r=r'+b， ## 课前预习
-1、在bilbil网站上有<strong><em><a
-href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
-2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
-3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
-<h2 id="学习过程">学习过程</h2>
-<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
-<ul>
-<li>第一部分：基础数论（第一到第五章）<br/>
-二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
-定理、EGCD、乘法逆元、消去<br/>
-律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
-<li>第二部分：基础群论（第六到第九章）<br/>
-群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
-Z</em>n。<br/></li>
-<li>第三部分：数论（第十到第十一章）<br/>
-中国剩余定理、二次剩余、二次互反律。<br/></li>
-<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
-等。<br/></li>
-<li>第五部分：椭圆曲线（第十四章）<br/>
-椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
-<li>第六部分：群算法（第十六、第十七章）<br/>
-大整数分解、离散对数求解。<br/>
-其中，第四部分和第五部分将会在大三继续学习。<br/></li>
-</ul>
-<h2 id="学科期望">学科期望</h2>
-<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
+<p><span class="math display">\[
+\begin{aligned}
+\\1、证明存在性:
+\\&amp;构造集合 S = \{a − bk : k \in Z 且 a − bk ≥ 0\}
+\\&amp;显然，集合 S 非空。由良序原则，存在一个最小元 r=a-qb。
+\\&amp;因此，a=qb+r,r≥0。
+\\&amp;运用反证法，如果r&gt;b，存在0&lt;r&#39;&lt;r,使得r=r&#39;+b，
+\\&amp;则a=qb+r=qb+r&#39;+b=(q+1)b+r&#39;，a-(q+1)b=r&#39;.
+\\&amp;由集合 S 定义可知，r&#39;\in S,又r&#39;&lt;r，则r必然不为最小元。
+\\&amp;与题目条件r是最小元矛盾，故r&lt;b。
+\\&amp;所以，0 ≤ r &lt; b。
+\\2、证明唯一性:
+\\&amp;运用反证法，设存在不唯一的整数对q和r。可分成q不变r改变和\\&amp;q改变r不变两种情况。
+\\&amp;当q不能改变，r可以改变时，存在
+\\&amp;a=qb+r  (1)
+\\&amp;a=qb+r&#39;  (2)
+\\&amp;(2)-(1)，得 0=r-r&#39;
+\\&amp;因为r /neq r&#39;，所以0 /neq r-r&#39;
+\\&amp;所以 0 /neq 0，矛盾，所以r不可以改变。
+\\&amp;当r不能改变，q可以改变时，存在
+\\&amp;a=qb+r  (1)
+\\&amp;a=q&#39;b+r  (2)
+\\&amp;(2)-(1)，得 0=(q-q&#39;)b
+\\&amp;因为q /neq q&#39;，b&gt;0,所以0 /neq q-q&#39;
+\\&amp;所以 0 /neq 0，矛盾，所以q不可以改变。
+\\&amp;所以整数对q和r具有唯一性。
+\end{aligned}
+\]</span></p>
+<h2
+id="用-c-语言编程实现一种迭代版本的gcd算法在主函数中利用gcd算法写程序完成以下函数的功能输入一个正整数n输出大于等于1小于n且与n互素的正整数的个数">用
+C
+语言编程实现一种迭代版本的gcd算法，在主函数中利用gcd算法，写程序完成以下函数的功能。输入：一个正整数n；输出：大于等于1，小于n，且与n互素的正整数的个数。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (b) &#123;</span><br><span class="line">		a = a % b;</span><br><span class="line">		<span class="type">int</span> temp = a;</span><br><span class="line">		a = b;</span><br><span class="line">		b = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n, k = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">2</span>)cout &lt;&lt; <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">gcd</span>(n, i) == <span class="number">1</span>)k++;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; k &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="用-c-语言编程实现一种egcd算法">用 C
+语言编程实现一种egcd算法</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span>* <span class="title">egcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (b!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = a / b;</span><br><span class="line">		z2 = b;</span><br><span class="line">		z3 = a%b;</span><br><span class="line">		q = z1; a = z2; b = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span>* p;</span><br><span class="line">	p = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(a) * <span class="number">3</span>);</span><br><span class="line">	<span class="keyword">if</span> (p == <span class="literal">NULL</span>)<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	p[<span class="number">0</span>] = a; p[<span class="number">1</span>] = r0; p[<span class="number">2</span>] = s0;</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	<span class="keyword">if</span> (b &gt; a)<span class="built_in">swap</span>(a, b);</span><br><span class="line">	<span class="type">int</span> * p=<span class="built_in">egcd</span>(a, b);</span><br><span class="line">	cout &lt;&lt; p[<span class="number">0</span>] &lt;&lt; <span class="string">&quot;=&quot;</span> &lt;&lt; p[<span class="number">1</span>] &lt;&lt; <span class="string">&quot;*&quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&#x27;+&#x27;</span>; </span><br><span class="line">	<span class="keyword">if</span> (p[<span class="number">2</span>] &lt; <span class="number">0</span>)cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; p[<span class="number">2</span>] &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; p[<span class="number">2</span>]; </span><br><span class="line">	cout&lt;&lt; <span class="string">&quot;*&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="第二章第6题">第二章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;g^a\equiv1(mod\quad m) \quad g^b\equiv1(mod\quad m)
+\\&amp;设g^a=r&#39;m+1 \quad g^a=s&#39;m+1
+\\&amp;因为 gcd(a,b)=ar+bs
+\\&amp;所以 g^{gcd(a,b)}=(g^a)^r*(g^b)^s
+\\&amp;所以 g^{gcd(a,b)}=km+1(k为整数)
+\\&amp;所以 g^{gcd(a,b)}\equiv1(mod\quad m)
+\\&amp;
+\\&amp;
+\end{aligned}
+\]</span></p>
+<h2 id="第二章第8题">第二章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;运用反证法，设 gcd(a/d, b/d) = n(n&gt;1)。
+\\&amp;因为a/d的因子肯定是a的因子，b/d的因子肯定是b的因子，
+\\&amp;如果n是a/d的因子，n*d是a的因子，同理n*d是b的因子
+\\&amp;所以n*d是a和b的公因子
+\\&amp;则a和b的最大公约数d&#39;≥d*n&gt;d，与d是a和b的最大公约数矛盾。
+\\&amp;所以 gcd(a/d, b/d) = 1。
+\end{aligned}
+\]</span></p>
 <h2 id="结语">结语</h2>
-<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
-<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
+<p><strong>我博客上第一个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
