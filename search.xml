@@ -99,14 +99,14 @@ id="给出定理1.1除法算法的完整证明">给出定理1.1(除法算法)的
 \\&amp;a=qb+r  (1)
 \\&amp;a=qb+r&#39;  (2)
 \\&amp;(2)-(1)，得 0=r-r&#39;
-\\&amp;因为r /neq r&#39;，所以0 /neq r-r&#39;
-\\&amp;所以 0 /neq 0，矛盾，所以r不可以改变。
+\\&amp;因为r \neq r&#39;，所以0 \neq r-r&#39;
+\\&amp;所以 0 \neq 0，矛盾，所以r不可以改变。
 \\&amp;当r不能改变，q可以改变时，存在
 \\&amp;a=qb+r  (1)
 \\&amp;a=q&#39;b+r  (2)
 \\&amp;(2)-(1)，得 0=(q-q&#39;)b
-\\&amp;因为q /neq q&#39;，b&gt;0,所以0 /neq q-q&#39;
-\\&amp;所以 0 /neq 0，矛盾，所以q不可以改变。
+\\&amp;因为q \neq q&#39;，b&gt;0,所以0 \neq q-q&#39;
+\\&amp;所以 0 \neq 0，矛盾，所以q不可以改变。
 \\&amp;所以整数对q和r具有唯一性。
 \end{aligned}
 \]</span></p>
@@ -122,10 +122,15 @@ C
 <p><span class="math display">\[
 \begin{aligned}
 \\&amp;g^a\equiv1(mod\quad m) \quad g^b\equiv1(mod\quad m)
-\\&amp;设g^a=r&#39;m+1 \quad g^a=s&#39;m+1
+\\&amp;设g^a=xm+1 \quad g^b=ym+1
 \\&amp;因为 gcd(a,b)=ar+bs
 \\&amp;所以 g^{gcd(a,b)}=(g^a)^r*(g^b)^s
-\\&amp;所以 g^{gcd(a,b)}=km+1(k为整数)
+\\&amp;所以 g^{gcd(a,b)}=(xm+1)^r*(ym+1)^s
+\\&amp;因为 (xm+1)^r=xm*(xm+1)^{r-1}+xm*(xm+1)^{r-2}+...+xm+1
+\\&amp;=x*[(xm+1)^{r-1}+(xm+1)^{r-2}+...+1)*m+1=km+1(k为整数)，
+\\&amp;同理，(ym+1)^s=k&#39;m+1(k&#39;m为整数)
+\\&amp;(km+1)(k&#39;m+1)=kk&#39;m^2+(k+k&#39;)m+1=nm+1(n为整数)
+\\&amp;所以 g^{gcd(a,b)}=nm+1(n为整数)
 \\&amp;所以 g^{gcd(a,b)}\equiv1(mod\quad m)
 \\&amp;
 \\&amp;
@@ -134,12 +139,18 @@ C
 <h2 id="第二章第8题">第二章第8题</h2>
 <p><span class="math display">\[
 \begin{aligned}
+\\&amp;方法一：
 \\&amp;运用反证法，设 gcd(a/d, b/d) = n(n&gt;1)。
 \\&amp;因为a/d的因子肯定是a的因子，b/d的因子肯定是b的因子，
 \\&amp;如果n是a/d的因子，n*d是a的因子，同理n*d是b的因子
 \\&amp;所以n*d是a和b的公因子
 \\&amp;则a和b的最大公约数d&#39;≥d*n&gt;d，与d是a和b的最大公约数矛盾。
 \\&amp;所以 gcd(a/d, b/d) = 1。
+\\&amp;方法二：
+\\&amp;如果gcd(a,b)=d，则存在唯一的r和s使得d=ar+bs
+\\&amp;因为d是a,b的最大公约数，所以a/d为整数，b/d为整数，
+\\&amp;所以(ar+bs)/d=a/d*r+b/d*s=1
+\\&amp;所以gcd(a/d,b/d)=1
 \end{aligned}
 \]</span></p>
 <h2 id="结语">结语</h2>
