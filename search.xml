@@ -29,95 +29,6 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>第二次作业</title>
-    <url>/2023/09/19/homework2/</url>
-    <content><![CDATA[<h1 id="编程题">编程题</h1>
-<h2
-id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
-mod m，即a的b次方模m。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2
-id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\begin{aligned}
-\\1、证明存在性:
-\\&amp;构造集合 S = \{a − bk : k \in Z 且 a − bk ≥ 0\}
-\\&amp;显然，集合 S 非空。由良序原则，存在一个最小元 r=a-qb。
-\\&amp;因此，a=qb+r,r≥0。
-\\&amp;运用反证法，如果r&gt;b，存在0&lt;r&#39;&lt;r,使得r=r&#39;+b，
-\\&amp;则a=qb+r=qb+r&#39;+b=(q+1)b+r&#39;，a-(q+1)b=r&#39;.
-\\&amp;由集合 S 定义可知，r&#39;\in S,又r&#39;&lt;r，则r必然不为最小元。
-\\&amp;与题目条件r是最小元矛盾，故r&lt;b。
-\\&amp;所以，0 ≤ r &lt; b。
-\\2、证明唯一性:
-\\&amp;运用反证法，设存在不唯一的整数对q和r。可分成q不变r改变和\\&amp;q改变r不变两种情况。
-\\&amp;当q不能改变，r可以改变时，存在
-\\&amp;a=qb+r  (1)
-\\&amp;a=qb+r&#39;  (2)
-\\&amp;(2)-(1)，得 0=r-r&#39;
-\\&amp;因为r \neq r&#39;，所以0 \neq r-r&#39;
-\\&amp;所以 0 \neq 0，矛盾，所以r不可以改变。
-\\&amp;当r不能改变，q可以改变时，存在
-\\&amp;a=qb+r  (1)
-\\&amp;a=q&#39;b+r  (2)
-\\&amp;(2)-(1)，得 0=(q-q&#39;)b
-\\&amp;因为q \neq q&#39;，b&gt;0,所以0 \neq q-q&#39;
-\\&amp;所以 0 \neq 0，矛盾，所以q不可以改变。
-\\&amp;所以整数对q和r具有唯一性。
-\end{aligned}
-\]</span></p>
-<h2
-id="用-c-语言编程实现一种迭代版本的gcd算法在主函数中利用gcd算法写程序完成以下函数的功能输入一个正整数n输出大于等于1小于n且与n互素的正整数的个数">用
-C
-语言编程实现一种迭代版本的gcd算法，在主函数中利用gcd算法，写程序完成以下函数的功能。输入：一个正整数n；输出：大于等于1，小于n，且与n互素的正整数的个数。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (b) &#123;</span><br><span class="line">		a = a % b;</span><br><span class="line">		<span class="type">int</span> temp = a;</span><br><span class="line">		a = b;</span><br><span class="line">		b = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n, k = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">2</span>)cout &lt;&lt; <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">gcd</span>(n, i) == <span class="number">1</span>)k++;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; k &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="用-c-语言编程实现一种egcd算法">用 C
-语言编程实现一种egcd算法</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span>* <span class="title">egcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (b!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = a / b;</span><br><span class="line">		z2 = b;</span><br><span class="line">		z3 = a%b;</span><br><span class="line">		q = z1; a = z2; b = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span>* p;</span><br><span class="line">	p = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(a) * <span class="number">3</span>);</span><br><span class="line">	<span class="keyword">if</span> (p == <span class="literal">NULL</span>)<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	p[<span class="number">0</span>] = a; p[<span class="number">1</span>] = r0; p[<span class="number">2</span>] = s0;</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	<span class="keyword">if</span> (b &gt; a)<span class="built_in">swap</span>(a, b);</span><br><span class="line">	<span class="type">int</span> * p=<span class="built_in">egcd</span>(a, b);</span><br><span class="line">	cout &lt;&lt; p[<span class="number">0</span>] &lt;&lt; <span class="string">&quot;=&quot;</span> &lt;&lt; p[<span class="number">1</span>] &lt;&lt; <span class="string">&quot;*&quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&#x27;+&#x27;</span>; </span><br><span class="line">	<span class="keyword">if</span> (p[<span class="number">2</span>] &lt; <span class="number">0</span>)cout &lt;&lt; <span class="string">&quot;(&quot;</span> &lt;&lt; p[<span class="number">2</span>] &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">	<span class="keyword">else</span> cout &lt;&lt; p[<span class="number">2</span>]; </span><br><span class="line">	cout&lt;&lt; <span class="string">&quot;*&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="第二章第6题">第二章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;g^a\equiv1(mod\quad m) \quad g^b\equiv1(mod\quad m)
-\\&amp;设g^a=xm+1 \quad g^b=ym+1
-\\&amp;因为 gcd(a,b)=ar+bs
-\\&amp;所以 g^{gcd(a,b)}=(g^a)^r*(g^b)^s
-\\&amp;所以 g^{gcd(a,b)}=(xm+1)^r*(ym+1)^s
-\\&amp;因为 (xm+1)^r=xm*(xm+1)^{r-1}+xm*(xm+1)^{r-2}+...+xm+1
-\\&amp;=x*[(xm+1)^{r-1}+(xm+1)^{r-2}+...+1)*m+1=km+1(k为整数)，
-\\&amp;同理，(ym+1)^s=k&#39;m+1(k&#39;m为整数)
-\\&amp;(km+1)(k&#39;m+1)=kk&#39;m^2+(k+k&#39;)m+1=nm+1(n为整数)
-\\&amp;所以 g^{gcd(a,b)}=nm+1(n为整数)
-\\&amp;所以 g^{gcd(a,b)}\equiv1(mod\quad m)
-\\&amp;
-\\&amp;
-\end{aligned}
-\]</span></p>
-<h2 id="第二章第8题">第二章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;方法一：
-\\&amp;运用反证法，设 gcd(a/d, b/d) = n(n&gt;1)。
-\\&amp;因为a/d的因子肯定是a的因子，b/d的因子肯定是b的因子，
-\\&amp;如果n是a/d的因子，n*d是a的因子，同理n*d是b的因子
-\\&amp;所以n*d是a和b的公因子
-\\&amp;则a和b的最大公约数d&#39;≥d*n&gt;d，与d是a和b的最大公约数矛盾。
-\\&amp;所以 gcd(a/d, b/d) = 1。
-\\&amp;方法二：
-\\&amp;如果gcd(a,b)=d，则存在唯一的r和s使得d=ar+bs
-\\&amp;因为d是a,b的最大公约数，所以a/d为整数，b/d为整数，
-\\&amp;所以(ar+bs)/d=a/d*r+b/d*s=1
-\\&amp;所以gcd(a/d,b/d)=1
-\end{aligned}
-\]</span></p>
-<h2 id="结语">结语</h2>
-<p><strong>我博客上第一个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第一次作业</title>
     <url>/2023/09/19/homework1/</url>
     <content><![CDATA[<h2
@@ -198,6 +109,76 @@ C
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第一个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第二次作业</title>
+    <url>/2023/09/19/homework2/</url>
+    <content><![CDATA[<h1 id="编程题">编程题</h1>
+<h2
+id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2
+id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="计算题">计算题</h1>
+<h2 id="第四章第1题">第四章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
+\\&amp;又由模指数运算和2019取模于22=17,可得
+\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
+\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
+\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
+\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
+\\&amp;所以 3^{2019}\quad mod\quad23=16
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第5题">第四章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
+\\&amp;又由模指数运算可得
+\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
+\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
+\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
+\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
+\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
+\\&amp;又由模指数运算可得，
+\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
+\\&amp;13整除2^{70}+3^{70}
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第6题">第四章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;由欧拉定理
+\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
+\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
+\\&amp;\phi (5)=4，\phi (11)=10
+\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
+\\&amp;因为40整除100000，
+\\&amp;所以2^{100000}\equiv1(mod\quad55)
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第8题">第四章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
+\\&amp;由欧拉定理
+\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
+\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
+\\&amp;\phi (25)=20，\phi (4)=2
+\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
+\\&amp;因为40整除1000，
+\\&amp;所以7^{1000}\equiv1(mod\quad100)
+\\&amp;7^{1000}的最后两个数位是01
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
