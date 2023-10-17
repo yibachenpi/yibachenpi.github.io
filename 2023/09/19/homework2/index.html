@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yibachenpi.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="用C语言实现一种迭代版本的简单乘法 1234567891011121314151617#include &lt;iostream&gt;using namespace std;int multiply(int a, int b) &amp;#123;	int sum &#x3D; 0;	if (b &#x3D;&#x3D; 0)return 0;	while (b) &amp;#123;		if (b &amp; 1) sum +&#x3D; a;">
+    <meta name="description" content="编程题 写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b mod m，即a的b次方模m。 1234567891011121314#include &lt;iostream&gt;using namespace std;int Mod_Exp(int a,int b,int m) &amp;#123;	int sum;	if (b &#x3D;&#x3D; 0)return 1;	sum &#x3D; Mod_Exp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一次作业">
-<meta property="og:url" content="https://yibachenpi.github.io/2023/09/19/homework1/index.html">
+<meta property="og:title" content="第二次作业">
+<meta property="og:url" content="https://yibachenpi.github.io/2023/09/19/homework2/index.html">
 <meta property="og:site_name" content="海绵宝宝">
-<meta property="og:description" content="用C语言实现一种迭代版本的简单乘法 1234567891011121314151617#include &lt;iostream&gt;using namespace std;int multiply(int a, int b) &amp;#123;	int sum &#x3D; 0;	if (b &#x3D;&#x3D; 0)return 0;	while (b) &amp;#123;		if (b &amp; 1) sum +&#x3D; a;">
+<meta property="og:description" content="编程题 写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b mod m，即a的b次方模m。 1234567891011121314#include &lt;iostream&gt;using namespace std;int Mod_Exp(int a,int b,int m) &amp;#123;	int sum;	if (b &#x3D;&#x3D; 0)return 1;	sum &#x3D; Mod_Exp">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-19T15:09:44.000Z">
-<meta property="article:modified_time" content="2023-09-27T19:33:23.111Z">
+<meta property="article:modified_time" content="2023-10-17T13:08:30.223Z">
 <meta property="article:author" content="yibachenpi">
 <meta property="article:tag" content="-作业">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yibachenpi.github.io/2023/09/19/homework1/">
+<link rel="canonical" href="https://yibachenpi.github.io/2023/09/19/homework2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yibachenpi.github.io/2023/09/19/homework1/","path":"2023/09/19/homework1/","title":"第一次作业"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yibachenpi.github.io/2023/09/19/homework2/","path":"2023/09/19/homework2/","title":"第二次作业"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>第一次作业 | 海绵宝宝</title>
+<title>第二次作业 | 海绵宝宝</title>
   
 
 
@@ -139,10 +139,11 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E4%B8%80%E7%A7%8D%E8%BF%AD%E4%BB%A3%E7%89%88%E6%9C%AC%E7%9A%84%E7%AE%80%E5%8D%95%E4%B9%98%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">用C语言实现一种迭代版本的简单乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E5%87%BA%E5%AE%9A%E7%90%861.1%E9%99%A4%E6%B3%95%E7%AE%97%E6%B3%95%E7%9A%84%E5%AE%8C%E6%95%B4%E8%AF%81%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">给出定理1.1(除法算法)的完整证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E7%A7%8D%E8%BF%AD%E4%BB%A3%E7%89%88%E6%9C%AC%E7%9A%84gcd%E7%AE%97%E6%B3%95%E5%9C%A8%E4%B8%BB%E5%87%BD%E6%95%B0%E4%B8%AD%E5%88%A9%E7%94%A8gcd%E7%AE%97%E6%B3%95%E5%86%99%E7%A8%8B%E5%BA%8F%E5%AE%8C%E6%88%90%E4%BB%A5%E4%B8%8B%E5%87%BD%E6%95%B0%E7%9A%84%E5%8A%9F%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n%E8%BE%93%E5%87%BA%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E1%E5%B0%8F%E4%BA%8En%E4%B8%94%E4%B8%8En%E4%BA%92%E7%B4%A0%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">用
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E7%A8%8B%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">编程题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%8C%87%E6%95%B0%E8%BF%90%E7%AE%97%E5%87%BD%E6%95%B0mod_exp%E8%BE%93%E5%85%A5ab%E5%92%8Cm%E8%BE%93%E5%87%BAab-mod-m%E5%8D%B3a%E7%9A%84b%E6%AC%A1%E6%96%B9%E6%A8%A1m"><span class="nav-number">1.1.</span> <span class="nav-text">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E6%B1%82%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83%E7%9A%84%E5%87%BD%E6%95%B0mul_inverse%E8%BE%93%E5%85%A5a%E5%92%8Cm%E6%B1%82a%E6%A8%A1m%E7%9A%84%E4%B9%98%E6%B3%95%E9%80%86%E5%85%83%E6%8F%90%E7%A4%BA%E8%A6%81%E6%B1%82%E5%8F%AA%E8%BE%93%E5%87%BA%E6%AD%A3%E6%95%B4%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E7%A7%8D%E8%BF%AD%E4%BB%A3%E7%89%88%E6%9C%AC%E7%9A%84gcd%E7%AE%97%E6%B3%95%E5%9C%A8%E4%B8%BB%E5%87%BD%E6%95%B0%E4%B8%AD%E5%88%A9%E7%94%A8gcd%E7%AE%97%E6%B3%95%E5%86%99%E7%A8%8B%E5%BA%8F%E5%AE%8C%E6%88%90%E4%BB%A5%E4%B8%8B%E5%87%BD%E6%95%B0%E7%9A%84%E5%8A%9F%E8%83%BD%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n%E8%BE%93%E5%87%BA%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E1%E5%B0%8F%E4%BA%8En%E4%B8%94%E4%B8%8En%E4%BA%92%E7%B4%A0%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">用
 C
-语言编程实现一种迭代版本的gcd算法，在主函数中利用gcd算法，写程序完成以下函数的功能。输入：一个正整数n；输出：大于等于1，小于n，且与n互素的正整数的个数。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E7%A7%8Degcd%E7%AE%97%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">用 C
-语言编程实现一种egcd算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%AC6%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">第二章第6题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%AC8%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">第二章第8题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">7.</span> <span class="nav-text">结语</span></a></li></ol></div>
+语言编程实现一种迭代版本的gcd算法，在主函数中利用gcd算法，写程序完成以下函数的功能。输入：一个正整数n；输出：大于等于1，小于n，且与n互素的正整数的个数。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8-c-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0%E4%B8%80%E7%A7%8Degcd%E7%AE%97%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text">用 C
+语言编程实现一种egcd算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%AC6%E9%A2%98"><span class="nav-number">1.5.</span> <span class="nav-text">第二章第6题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%AC8%E9%A2%98"><span class="nav-number">1.6.</span> <span class="nav-text">第二章第8题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.7.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -198,7 +199,7 @@ C
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/09/19/homework1/">
+    <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/09/19/homework2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Bob.png">
@@ -211,12 +212,12 @@ C
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="第一次作业 | 海绵宝宝">
+      <meta itemprop="name" content="第二次作业 | 海绵宝宝">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          第一次作业
+          第二次作业
         </h1>
 
         <div class="post-meta-container">
@@ -234,7 +235,7 @@ C
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-28 03:33:23" itemprop="dateModified" datetime="2023-09-28T03:33:23+08:00">2023-09-28</time>
+      <time title="修改时间：2023-10-17 21:08:30" itemprop="dateModified" datetime="2023-10-17T21:08:30+08:00">2023-10-17</time>
     </span>
 
   
@@ -246,11 +247,14 @@ C
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2
-id="用c语言实现一种迭代版本的简单乘法">用C语言实现一种迭代版本的简单乘法</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">multiply</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (b) &#123;</span><br><span class="line">		<span class="keyword">if</span> (b &amp; <span class="number">1</span>) sum += a;</span><br><span class="line">		a &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">multiply</span>(a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h1 id="编程题">编程题</h1>
 <h2
-id="给出定理1.1除法算法的完整证明">给出定理1.1(除法算法)的完整证明</h2>
+id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2
+id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[
 \begin{aligned}
 \\1、证明存在性:
@@ -340,14 +344,11 @@ C
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/08/20/test-my-site/" rel="prev" title="信息安全数学基础">
-                  <i class="fa fa-angle-left"></i> 信息安全数学基础
+                <a href="/2023/09/19/homework1/" rel="prev" title="第一次作业">
+                  <i class="fa fa-angle-left"></i> 第一次作业
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/09/19/homework2/" rel="next" title="第二次作业">
-                  第二次作业 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
