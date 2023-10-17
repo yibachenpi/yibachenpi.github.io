@@ -190,6 +190,137 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/10/17/homework2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Bob.png">
+      <meta itemprop="name" content="yibachenpi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海绵宝宝">
+      <meta itemprop="description" content="派大星，我们一起去抓水母吧！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海绵宝宝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/17/homework2/" class="post-title-link" itemprop="url">第二次作业</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-10-17 23:09:44 / 修改时间：23:13:13" itemprop="dateCreated datePublished" datetime="2023-10-17T23:09:44+08:00">2023-10-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="编程题">编程题</h1>
+<h2
+id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2
+id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="计算题">计算题</h1>
+<h2 id="第四章第1题">第四章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
+\\&amp;又由模指数运算和2019取模于22=17,可得
+\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
+\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
+\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
+\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
+\\&amp;所以 3^{2019}\quad mod\quad23=16
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第5题">第四章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
+\\&amp;又由模指数运算可得
+\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
+\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
+\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
+\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
+\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
+\\&amp;又由模指数运算可得，
+\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
+\\&amp;13整除2^{70}+3^{70}
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第6题">第四章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;由欧拉定理
+\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
+\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
+\\&amp;\phi (5)=4，\phi (11)=10
+\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
+\\&amp;因为40整除100000，
+\\&amp;所以2^{100000}\equiv1(mod\quad55)
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第8题">第四章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
+\\&amp;由欧拉定理
+\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
+\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
+\\&amp;\phi (25)=20，\phi (4)=2
+\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
+\\&amp;因为40整除1000，
+\\&amp;所以7^{1000}\equiv1(mod\quad100)
+\\&amp;7^{1000}的最后两个数位是01
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/09/19/homework1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -317,143 +448,6 @@ C
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第一个作业完成！</strong><br/></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/09/19/homework2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Bob.png">
-      <meta itemprop="name" content="yibachenpi">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海绵宝宝">
-      <meta itemprop="description" content="派大星，我们一起去抓水母吧！">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 海绵宝宝">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/09/19/homework2/" class="post-title-link" itemprop="url">第二次作业</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-09-19 23:09:44" itemprop="dateCreated datePublished" datetime="2023-09-19T23:09:44+08:00">2023-09-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-10-17 23:07:35" itemprop="dateModified" datetime="2023-10-17T23:07:35+08:00">2023-10-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="编程题">编程题</h1>
-<h2
-id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
-mod m，即a的b次方模m。</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2
-id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="计算题">计算题</h1>
-<h2 id="第四章第1题">第四章第1题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
-\\&amp;又由模指数运算和2019取模于22=17,可得
-\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
-\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
-\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
-\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
-\\&amp;所以 3^{2019}\quad mod\quad23=16
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第5题">第四章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
-\\&amp;又由模指数运算可得
-\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
-\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
-\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
-\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
-\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
-\\&amp;又由模指数运算可得，
-\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
-\\&amp;13整除2^{70}+3^{70}
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第6题">第四章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;由欧拉定理
-\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
-\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
-\\&amp;\phi (5)=4，\phi (11)=10
-\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
-\\&amp;因为40整除100000，
-\\&amp;所以2^{100000}\equiv1(mod\quad55)
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第8题">第四章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
-\\&amp;由欧拉定理
-\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
-\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
-\\&amp;\phi (25)=20，\phi (4)=2
-\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
-\\&amp;因为40整除1000，
-\\&amp;所以7^{1000}\equiv1(mod\quad100)
-\\&amp;7^{1000}的最后两个数位是01
-\end{aligned}
-\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
 
       
     </div>
