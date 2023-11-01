@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/08/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>信息安全数学基础</title>
+    <url>/2023/08/20/test-my-site/</url>
+    <content><![CDATA[<h2 id="绪论">绪论</h2>
+<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
+辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
+和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
+<h2 id="学习环境">学习环境</h2>
+<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
+是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
+直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
+<h2 id="课前预习">课前预习</h2>
+<p>1、在bilbil网站上有<strong><em><a
+href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
+2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
+3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
+<h2 id="学习过程">学习过程</h2>
+<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
+<ul>
+<li>第一部分：基础数论（第一到第五章）<br/>
+二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
+定理、EGCD、乘法逆元、消去<br/>
+律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
+<li>第二部分：基础群论（第六到第九章）<br/>
+群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
+Z</em>n。<br/></li>
+<li>第三部分：数论（第十到第十一章）<br/>
+中国剩余定理、二次剩余、二次互反律。<br/></li>
+<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
+等。<br/></li>
+<li>第五部分：椭圆曲线（第十四章）<br/>
+椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
+<li>第六部分：群算法（第十六、第十七章）<br/>
+大整数分解、离散对数求解。<br/>
+其中，第四部分和第五部分将会在大三继续学习。<br/></li>
+</ul>
+<h2 id="学科期望">学科期望</h2>
+<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
+<h2 id="结语">结语</h2>
+<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
+<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
 ]]></content>
+      <tags>
+        <tag>-前言</tag>
+      </tags>
   </entry>
   <entry>
     <title>第一次作业</title>
@@ -115,6 +133,34 @@ C
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/08/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>第二次作业</title>
     <url>/2023/10/17/homework2/</url>
     <content><![CDATA[<h1 id="编程题">编程题</h1>
@@ -185,49 +231,117 @@ id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆�
       </tags>
   </entry>
   <entry>
-    <title>信息安全数学基础</title>
-    <url>/2023/08/20/test-my-site/</url>
-    <content><![CDATA[<h2 id="绪论">绪论</h2>
-<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
-辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
-和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
-<h2 id="学习环境">学习环境</h2>
-<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
-是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
-直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
-<h2 id="课前预习">课前预习</h2>
-<p>1、在bilbil网站上有<strong><em><a
-href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
-2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
-3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
-<h2 id="学习过程">学习过程</h2>
-<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
-<ul>
-<li>第一部分：基础数论（第一到第五章）<br/>
-二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
-定理、EGCD、乘法逆元、消去<br/>
-律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
-<li>第二部分：基础群论（第六到第九章）<br/>
-群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
-Z</em>n。<br/></li>
-<li>第三部分：数论（第十到第十一章）<br/>
-中国剩余定理、二次剩余、二次互反律。<br/></li>
-<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
-等。<br/></li>
-<li>第五部分：椭圆曲线（第十四章）<br/>
-椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
-<li>第六部分：群算法（第十六、第十七章）<br/>
-大整数分解、离散对数求解。<br/>
-其中，第四部分和第五部分将会在大三继续学习。<br/></li>
-</ul>
-<h2 id="学科期望">学科期望</h2>
-<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
-<h2 id="结语">结语</h2>
-<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
-<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
+    <title>第三次作业</title>
+    <url>/2023/11/01/homework3/</url>
+    <content><![CDATA[<h2 id="第六章第7题">第六章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证明g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
+\\&amp;因为G是群，若g_0 g_1 · · · g_n的逆元是g^{−1}_n· ·
+·g^{−1}_1g^{−1}_0，
+\\&amp;则g^{−1}_n· · ·g^{−1}_1g^{−1}_0的逆元是g_0 g_1 · · · g_n，
+\\&amp;因此该问题可转化为求(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · ·
+g_n)=e。
+\\&amp;由群公理的逆元可知，任取g\in G，g\bullet g^{-1}=e，e为单位元
+\\&amp;又由群公理的结合律，
+\\&amp;(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · · g_n)
+\\&amp;=g^{−1}_n· · ·g^{−1}_1(g^{−1}_0\bullet g_0 )g_1 · · · g_n
+\\&amp;=g^{−1}_n· · ·g^{−1}_2(g^{−1}_1\bullet  g_1)g_2 · · · g_n
+\\&amp; · · ·
+\\&amp;=g^{−1}_n\bullet g_n
+\\&amp;=e
+\\&amp;所以，g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第8题">第六章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证任意群G的两个子群的交集也是群G的子群。
+\\&amp;设群G的两个子群为H_1和H_2，交集为H。
+\\&amp;\left(1\right)证封闭性：
+\\&amp;任取g_1,g_2\in H，则g_1,g_2\in H_1，g_1,g_2\in H_2。
+\\&amp;因为H_1和H_2为群，由封闭性，g_1\bullet g_2\in H_1，g_1\bullet
+g_2\in H_2
+\\&amp;所以g_1\bullet g_2\in H，H满足封闭性。
+\\&amp;\left(2\right)证结合律：
+\\&amp;任取g_1,g_2,g_3\in H，则g_1,g_2,g_3\in H_1，g_1,g_2,g_3\in H_2。
+\\&amp;因为H_1和H_2为群，由结合律，(g_1\bullet g_2)\bullet
+g_3=g_1\bullet (g_2\bullet g_3)，H满足结合律。
+\\&amp;\left(3\right)证单位元：
+\\&amp;因为H_1和H_2为群，由群公理的单位元存在定理，
+\\&amp;e\in H_1,e\in H_2,则e\in H,H中存在单位元。
+\\&amp;\left(4\right)证逆元：
+\\&amp;任取g\in H，则g\in H_1，g\in H_2。
+\\&amp;因为H_1和H_2为群，由群公理的逆元存在定理，g^{-1}\in H_1,g^{-1}\in
+H_2,
+\\&amp;则g^{-1}\in H,H中存在任意元素的逆元。
+\\&amp;综上可知，H满足群公理的所有条件，则
+\\&amp;任意群G的两个子群的交集也是群G的子群。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第9题">第六章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证伪：任意群 G 的两个子群的并集也是群 G 的子群。
+\\&amp;取群G为Z，设两个子群为2Z和3Z，并集为Z_1=2Z \cup 3Z
+\\&amp;证封闭性：
+\\&amp;2Z的元素2，3Z的元素3，2+3=5
+\\&amp;因为5\equiv1(mod\quad2)，5\equiv2(mod\quad3)
+\\&amp;所以5\notin 2Z且5\notin 3Z
+\\&amp;则5\notin Z_1
+\\&amp;Z_1不满足群公理的封闭性
+\\&amp;任意群 G 的两个子群的并集不一定是群 G 的子群。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第10题">第六章第10题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in
+K\rbrace 是群 G 的子群:
+\\&amp;\left(1\right)证封闭性：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
+\\&amp;因为G为阿贝尔群，由交换律，h_1k_1\bullet h_2k_2=h_1h_2\bullet
+k_1k_2，h_1h_2\bullet k_1k_2\in G
+\\&amp;由封闭性，h_1h_2\in H,k_1k_2\in K
+\\&amp;所以h_1h_2\bullet k_1k_2\in HK，HK满足封闭性
+\\&amp;\left(2\right)证结合律：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;任取h_3k_3\in HK，h3\in G,k3\in G,h_3k_3\in G
+\\&amp;因为G为群，由结合律，(h_1k_1\bullet h_2k_2)\bullet
+h_3k_3=h_1k_1\bullet (h_2k_2\bullet h_3k_3)，HK满足结合律
+\\&amp;\left(3\right)证单位元：
+\\&amp;因为H和K为群，由群公理的单位元存在定理
+\\&amp;e\in H,e\in K,则e\bullet e=e
+\\&amp;所以e\in HK,HK中存在单位元。
+\\&amp;\left(4\right)证逆元：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;因为G为群，由群公理的逆元存在定理，(h_1k_1)^{-1}\in G
+\\&amp;因为h_1k_1^{-1}=k_1^{-1}h_1^{-1}，所以k_1^{-1}h_1^{-1}\in G
+\\&amp;因为G为阿贝尔群，由交换律，k_1^{-1}h_1^{-1}=h_1^{-1}k_1^{-1}
+\\&amp;因为H，K为群，由群公理的逆元存在定理，h_1^{-1}\in H,k_1^{-1}\in K
+\\&amp;h_1^{-1}k_1^{-1}\in HK，所以HK中存在任意元素的逆元。
+\\&amp;综上可知，HK满足群公理的所有条件，则
+\\&amp;G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in K\rbrace 是群 G
+的子群
+\\&amp;\left(二\right)G 不是阿贝尔群，HK = \lbrace hk : h\in H, k\in
+K\rbrace 是群 G 的子群:
+\\&amp;证封闭性：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
+\\&amp;因为G不为阿贝尔群，所以该式不满足交换律
+\\&amp;故无法证h_1k_1\bullet h_2k_2\in HK，HK不满足封闭性
+\\&amp;HK不满足群公理的封闭性
+\\&amp;G 不是阿贝尔群， HK = \lbrace hk : h\in H, k\in K\rbrace 不是群 G
+的子群
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第三个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
-        <tag>-前言</tag>
+        <tag>-作业</tag>
       </tags>
   </entry>
 </search>
