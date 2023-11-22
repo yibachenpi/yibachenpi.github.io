@@ -185,158 +185,6 @@ id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆�
       </tags>
   </entry>
   <entry>
-    <title>信息安全数学基础</title>
-    <url>/2023/08/20/test-my-site/</url>
-    <content><![CDATA[<h2 id="绪论">绪论</h2>
-<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
-辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
-和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
-<h2 id="学习环境">学习环境</h2>
-<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
-是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
-直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
-<h2 id="课前预习">课前预习</h2>
-<p>1、在bilbil网站上有<strong><em><a
-href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
-2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
-3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
-<h2 id="学习过程">学习过程</h2>
-<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
-<ul>
-<li>第一部分：基础数论（第一到第五章）<br/>
-二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
-定理、EGCD、乘法逆元、消去<br/>
-律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
-<li>第二部分：基础群论（第六到第九章）<br/>
-群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
-Z</em>n。<br/></li>
-<li>第三部分：数论（第十到第十一章）<br/>
-中国剩余定理、二次剩余、二次互反律。<br/></li>
-<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
-等。<br/></li>
-<li>第五部分：椭圆曲线（第十四章）<br/>
-椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
-<li>第六部分：群算法（第十六、第十七章）<br/>
-大整数分解、离散对数求解。<br/>
-其中，第四部分和第五部分将会在大三继续学习。<br/></li>
-</ul>
-<h2 id="学科期望">学科期望</h2>
-<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
-<h2 id="结语">结语</h2>
-<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
-<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-前言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第四次作业</title>
-    <url>/2023/11/22/homework4/</url>
-    <content><![CDATA[<h2 id="第七章第2题">第七章第2题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为17是素数，Z^*_{17}=\{1,2, · · · ,16\}，因此Z^*_{17}的阶为16。
-\\&amp;由推论7.1得，Z^*_{17}中有\phi (16)个生成元
-\\&amp;\phi (16)=8，所以Z^*_{17}中有8个生成元
-\\&amp;由推论7.3，
-\\&amp;9=3^2 mod(17) 9的阶=16/gcd(2,16)=8，8整除16，所以9是生成元。
-\\&amp;10=3^3 mod(17) 10的阶=16/gcd(3,16)=1，1整除16，所以10是生成元。
-\end{aligned}
-\]</span></p>
-<h2 id="第七章第3题">第七章第3题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;Z_{pq}=\{0,1,2, · · · ,pq-1\}，Z的阶为pq
-\\&amp;由推论7.1得，Z_{pq}中有\phi (pq)个生成元
-\\&amp;\phi (pq)=\phi (p)*\phi (q)=(p-1)(q-1)
-\\&amp;所以Z_{pq}中有(p-1)(q-1)个生成元
-\\&amp;Z_{p^r}的阶为\{0,1,2, · · · ,p^r-1\}，Z的阶为p^r
-\\&amp;由推论7.1得，Z_{p^r}中有\phi (p^r)个生成元
-\\&amp;\phi (p^r)=p^r-p^{r-1}
-\\&amp;所以Z_{p^r}中有p^r-p^{r-1}个生成元
-\end{aligned}
-\]</span></p>
-<h2 id="第七章第6题">第七章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;证明：如果群G没有非平凡子群，则群G是循环群
-\\&amp;设e是群G的单位元因为群G没有非平凡子群，那么群G只有平凡子群。
-群G的子群只
-\\&amp;群G的子群只有\{e\} 和G本身
-\\&amp;由定理7.1,对于任意g\in
-G,集合&lt;g&gt;是G的子群，&lt;g&gt;是循环群
-\\&amp;则&lt;g&gt;=G,G也是循环群。
-\end{aligned}
-\]</span></p>
-<h2 id="第七章第8题">第七章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;证明：设 G 为任意群，且 g ∈ G。如果存在 m, n ∈ Z 使得 g^m = 1 且
-g^n = 1，
-\\&amp;则g^d = 1,其中d = gcd(m, n)。
-\\&amp;因为d = gcd(m, n)，所以由欧几里得算法，必然存在r和s，使得
-\\&amp;d=mr+ns
-\\&amp;则g^d =g^{mr+ns}=g^{mr}*g^{ns}=(g^m)^r*(g^n)^s=1
-\\&amp;所以，如果存在 m, n ∈ Z 使得 g^m = 1 且 g^n = 1，则g^d = 1
-\end{aligned}
-\]</span></p>
-<h2 id="第八章第1题">第八章第1题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;设 G 是群，H 是 G 的子群。任取 g_1, g_2 \in  G，
-\\&amp;则 g_1H = g_2H 当且仅当 g_1^{−1}g_2\in H。
-\\&amp;\left(1\right)证充分性：
-\\&amp;因为g_1H = g_2H，存在h_1,h_2\in H，使得
-\\&amp;g_1h_1=g_2h_2，则
-\\&amp;g_1^{−1}g_1h_1h_2^{−1}=g_1^{−1}g_2h_2h_2^{−1}
-\\&amp;则h_1h_2^{−1}=g_1^{−1}g_2
-\\&amp;由群公理的逆元存在定理,因为h_2\in H，所以h_2^{−1}\in H
-\\&amp;由群公理的封闭性,因为h_1,h_2^{−1}\in H，所以h_1h_2^{−1}\in H
-\\&amp;所以g_1^{−1}g_2\in H
-\\&amp;\left(2\right)证必要性：
-\\&amp;因为g_1^{−1}g_2\in H
-\\&amp;所以g_1g_1^{−1}g_2\in g_1H
-\\&amp;即g_2\in g_1H
-\\&amp;由群公理的单位元存在定理,e为H的单位元，因为g_2=g_2e\in g_2H
-\\&amp;g_1H和g_2H的交集不为空
-\\&amp;由命题8.3,g_1H = g_2H
-\end{aligned}
-\]</span></p>
-<h2 id="第八章第3题">第八章第3题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
-\\&amp;\left(1\right)g\in H：
-\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
-\\&amp;则gH=H，Hg=H，gH=Hg
-\\&amp;\left(2\right)g\in K：
-\\&amp;g\not\in H，gH\ne H，Hg\ne H
-\\&amp;gH=Hg=K
-\\&amp;所以，gH=Hg
-\end{aligned}
-\]</span></p>
-<h2 id="第八章第5题">第八章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;由拉格朗日定理，子群H的阶必然整除群G的阶
-\\&amp;所以，子群的阶是群G的阶的因子，因为G的阶为pq,p和q是素数
-\\&amp;并且子群为非平凡子群
-\\&amp;所以，G的非平凡子群的阶为p和q，为素数阶有限群
-\\&amp;由拉格朗日定理推论8.2，
-\\&amp;G的任意非平凡子群是循环群
-\end{aligned}
-\]</span></p>
-<h2 id="第八章第9题">第八章第9题</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_Prime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">prime_fators_list</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span>* list)</span><span class="comment">//素因子</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list_count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (num % i == <span class="number">0</span> &amp;&amp; <span class="built_in">is_Prime</span>(i))</span><br><span class="line">		&#123;</span><br><span class="line">			list[list_count] = i;</span><br><span class="line">			list_count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> list_count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_primitive_root</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> p)</span><span class="comment">//判断a是不是p的原根</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list[<span class="number">1000</span>];</span><br><span class="line">	<span class="type">int</span> list_count = <span class="built_in">prime_fators_list</span>(p - <span class="number">1</span>, list);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; list_count; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> tempy = (p - <span class="number">1</span>) / list[i];</span><br><span class="line">		<span class="type">int</span> temp = <span class="built_in">pow</span>(a, tempy);</span><br><span class="line">		<span class="keyword">if</span> (temp % p == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find_min_generator</span><span class="params">(<span class="type">int</span> p)</span><span class="comment">//找到P的最小生成元</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= p - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">is_primitive_root</span>(i, p))</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">find_min_gen_n</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> max_min_gen = <span class="number">0</span>;<span class="comment">//最小生成元集合中最大者</span></span><br><span class="line">	<span class="type">int</span> max_min_gen_of_num = <span class="number">0</span>;<span class="comment">//最小生成元集合中最大者对应的数字</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!<span class="built_in">is_Prime</span>(i))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		<span class="type">int</span> min_gen = <span class="built_in">find_min_generator</span>(i);</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;素数&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;的最小生成元为&quot;</span> &lt;&lt; min_gen &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">if</span> (min_gen &gt; max_min_gen)</span><br><span class="line">		&#123;</span><br><span class="line">			max_min_gen = min_gen;</span><br><span class="line">			max_min_gen_of_num = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;最小生成元集合中最大者对应的数字为&quot;</span> &lt;&lt; max_min_gen_of_num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="结语">结语</h2>
-<p><strong>我博客上第四个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第三次作业</title>
     <url>/2023/11/01/homework3/</url>
     <content><![CDATA[<h2 id="第六章第7题">第六章第7题</h2>
@@ -448,6 +296,158 @@ K\rbrace 是群 G 的子群:
 ]]></content>
       <tags>
         <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第四次作业</title>
+    <url>/2023/11/22/homework4/</url>
+    <content><![CDATA[<h2 id="第七章第2题">第七章第2题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为17是素数，Z^*_{17}=\{1,2, · · · ,16\}，因此Z^*_{17}的阶为16。
+\\&amp;由推论7.1得，Z^*_{17}中有\phi (16)个生成元
+\\&amp;\phi (16)=8，所以Z^*_{17}中有8个生成元
+\\&amp;由推论7.3，
+\\&amp;9=3^2 mod(17) 9的阶=16/gcd(2,16)=8，8整除16，所以9是生成元。
+\\&amp;10=3^3 mod(17) 10的阶=16/gcd(3,16)=1，1整除16，所以10是生成元。
+\end{aligned}
+\]</span></p>
+<h2 id="第七章第3题">第七章第3题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;Z_{pq}=\{0,1,2, · · · ,pq-1\}，Z的阶为pq
+\\&amp;由推论7.1得，Z_{pq}中有\phi (pq)个生成元
+\\&amp;\phi (pq)=\phi (p)*\phi (q)=(p-1)(q-1)
+\\&amp;所以Z_{pq}中有(p-1)(q-1)个生成元
+\\&amp;Z_{p^r}的阶为\{0,1,2, · · · ,p^r-1\}，Z的阶为p^r
+\\&amp;由推论7.1得，Z_{p^r}中有\phi (p^r)个生成元
+\\&amp;\phi (p^r)=p^r-p^{r-1}
+\\&amp;所以Z_{p^r}中有p^r-p^{r-1}个生成元
+\end{aligned}
+\]</span></p>
+<h2 id="第七章第6题">第七章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证明：如果群G没有非平凡子群，则群G是循环群
+\\&amp;设e是群G的单位元因为群G没有非平凡子群，那么群G只有平凡子群。
+群G的子群只
+\\&amp;群G的子群只有\{e\} 和G本身
+\\&amp;由定理7.1,对于任意g\in
+G,集合&lt;g&gt;是G的子群，&lt;g&gt;是循环群
+\\&amp;则&lt;g&gt;=G,G也是循环群。
+\end{aligned}
+\]</span></p>
+<h2 id="第七章第8题">第七章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证明：设 G 为任意群，且 g ∈ G。如果存在 m, n ∈ Z 使得 g^m = 1 且
+g^n = 1，
+\\&amp;则g^d = 1,其中d = gcd(m, n)。
+\\&amp;因为d = gcd(m, n)，所以由欧几里得算法，必然存在r和s，使得
+\\&amp;d=mr+ns
+\\&amp;则g^d =g^{mr+ns}=g^{mr}*g^{ns}=(g^m)^r*(g^n)^s=1
+\\&amp;所以，如果存在 m, n ∈ Z 使得 g^m = 1 且 g^n = 1，则g^d = 1
+\end{aligned}
+\]</span></p>
+<h2 id="第八章第1题">第八章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;设 G 是群，H 是 G 的子群。任取 g_1, g_2 \in  G，
+\\&amp;则 g_1H = g_2H 当且仅当 g_1^{−1}g_2\in H。
+\\&amp;\left(1\right)证充分性：
+\\&amp;因为g_1H = g_2H，存在h_1,h_2\in H，使得
+\\&amp;g_1h_1=g_2h_2，则
+\\&amp;g_1^{−1}g_1h_1h_2^{−1}=g_1^{−1}g_2h_2h_2^{−1}
+\\&amp;则h_1h_2^{−1}=g_1^{−1}g_2
+\\&amp;由群公理的逆元存在定理,因为h_2\in H，所以h_2^{−1}\in H
+\\&amp;由群公理的封闭性,因为h_1,h_2^{−1}\in H，所以h_1h_2^{−1}\in H
+\\&amp;所以g_1^{−1}g_2\in H
+\\&amp;\left(2\right)证必要性：
+\\&amp;因为g_1^{−1}g_2\in H
+\\&amp;所以g_1g_1^{−1}g_2\in g_1H
+\\&amp;即g_2\in g_1H
+\\&amp;由群公理的单位元存在定理,e为H的单位元，因为g_2=g_2e\in g_2H
+\\&amp;g_1H和g_2H的交集不为空
+\\&amp;由命题8.3,g_1H = g_2H
+\end{aligned}
+\]</span></p>
+<h2 id="第八章第3题">第八章第3题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
+\\&amp;\left(1\right)g\in H：
+\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
+\\&amp;则gH=H，Hg=H，gH=Hg
+\\&amp;\left(2\right)g\in K：
+\\&amp;g\not\in H，gH\ne H，Hg\ne H
+\\&amp;gH=Hg=K
+\\&amp;所以，gH=Hg
+\end{aligned}
+\]</span></p>
+<h2 id="第八章第5题">第八章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;由拉格朗日定理，子群H的阶必然整除群G的阶
+\\&amp;所以，子群的阶是群G的阶的因子，因为G的阶为pq,p和q是素数
+\\&amp;并且子群为非平凡子群
+\\&amp;所以，G的非平凡子群的阶为p和q，为素数阶有限群
+\\&amp;由拉格朗日定理推论8.2，
+\\&amp;G的任意非平凡子群是循环群
+\end{aligned}
+\]</span></p>
+<h2 id="第八章第9题">第八章第9题</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a)+<span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">PrimeFatorsList</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span>* list)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list_count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (num % i == <span class="number">0</span> &amp;&amp; <span class="built_in">IsPrime</span>(i))</span><br><span class="line">		&#123;</span><br><span class="line">			list[list_count] = i;</span><br><span class="line">			list_count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> list_count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrimitiveRoot</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> p)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list[<span class="number">1000</span>];</span><br><span class="line">	<span class="type">int</span> list_count = <span class="built_in">PrimeFatorsList</span>(p - <span class="number">1</span>, list);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; list_count; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> tempy = (p - <span class="number">1</span>) / list[i];</span><br><span class="line">		<span class="type">int</span> temp = <span class="built_in">pow</span>(a, tempy);</span><br><span class="line">		<span class="keyword">if</span> (temp % p == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">FindMinGenerator</span><span class="params">(<span class="type">int</span> p)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= p - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">IsPrimitiveRoot</span>(i, p))</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">FindMinGen</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> max_min_gen = <span class="number">0</span>; </span><br><span class="line">	<span class="type">int</span> max_min_gen_of_num = <span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!<span class="built_in">IsPrime</span>(i))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		<span class="type">int</span> min_gen = <span class="built_in">FindMinGen</span>(i);</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;素数&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;的最小生成元为&quot;</span> &lt;&lt; min_gen &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">if</span> (min_gen &gt; max_min_gen)</span><br><span class="line">		&#123;</span><br><span class="line">			max_min_gen = min_gen;</span><br><span class="line">			max_min_gen_of_num = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;最小生成元集合中最大者对应的数字为&quot;</span> &lt;&lt; max_min_gen_of_num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第四个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息安全数学基础</title>
+    <url>/2023/08/20/test-my-site/</url>
+    <content><![CDATA[<h2 id="绪论">绪论</h2>
+<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
+辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
+和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
+<h2 id="学习环境">学习环境</h2>
+<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
+是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
+直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
+<h2 id="课前预习">课前预习</h2>
+<p>1、在bilbil网站上有<strong><em><a
+href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
+2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
+3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
+<h2 id="学习过程">学习过程</h2>
+<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
+<ul>
+<li>第一部分：基础数论（第一到第五章）<br/>
+二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
+定理、EGCD、乘法逆元、消去<br/>
+律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
+<li>第二部分：基础群论（第六到第九章）<br/>
+群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
+Z</em>n。<br/></li>
+<li>第三部分：数论（第十到第十一章）<br/>
+中国剩余定理、二次剩余、二次互反律。<br/></li>
+<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
+等。<br/></li>
+<li>第五部分：椭圆曲线（第十四章）<br/>
+椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
+<li>第六部分：群算法（第十六、第十七章）<br/>
+大整数分解、离散对数求解。<br/>
+其中，第四部分和第五部分将会在大三继续学习。<br/></li>
+</ul>
+<h2 id="学科期望">学科期望</h2>
+<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
+<h2 id="结语">结语</h2>
+<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
+<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-前言</tag>
       </tags>
   </entry>
 </search>
