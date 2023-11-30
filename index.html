@@ -150,7 +150,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -329,6 +329,166 @@ g^n = 1，
 \]</span></p>
 <h2 id="第八章第9题">第八章第9题</h2>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a)+<span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">PrimeFatorsList</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span>* list)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list_count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (num % i == <span class="number">0</span> &amp;&amp; <span class="built_in">IsPrime</span>(i))</span><br><span class="line">		&#123;</span><br><span class="line">			list[list_count] = i;</span><br><span class="line">			list_count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> list_count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrimitiveRoot</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> p)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list[<span class="number">1000</span>];</span><br><span class="line">	<span class="type">int</span> list_count = <span class="built_in">PrimeFatorsList</span>(p - <span class="number">1</span>, list);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; list_count; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> tempy = (p - <span class="number">1</span>) / list[i];</span><br><span class="line">		<span class="type">int</span> temp = <span class="built_in">pow</span>(a, tempy);</span><br><span class="line">		<span class="keyword">if</span> (temp % p == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">FindMinGenerator</span><span class="params">(<span class="type">int</span> p)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= p - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">IsPrimitiveRoot</span>(i, p))</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">FindMinGen</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> max_min_gen = <span class="number">0</span>; </span><br><span class="line">	<span class="type">int</span> max_min_gen_of_num = <span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!<span class="built_in">IsPrime</span>(i))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		<span class="type">int</span> min_gen = <span class="built_in">FindMinGen</span>(i);</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;素数&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;的最小生成元为&quot;</span> &lt;&lt; min_gen &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">if</span> (min_gen &gt; max_min_gen)</span><br><span class="line">		&#123;</span><br><span class="line">			max_min_gen = min_gen;</span><br><span class="line">			max_min_gen_of_num = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;最小生成元集合中最大者对应的数字为&quot;</span> &lt;&lt; max_min_gen_of_num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第四个作业完成！</strong><br/></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://yibachenpi.github.io/2023/11/22/homework5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Bob.png">
+      <meta itemprop="name" content="yibachenpi">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海绵宝宝">
+      <meta itemprop="description" content="派大星，我们一起去抓水母吧！">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 海绵宝宝">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/11/22/homework5/" class="post-title-link" itemprop="url">第四次作业</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-11-22 11:10:11" itemprop="dateCreated datePublished" datetime="2023-11-22T11:10:11+08:00">2023-11-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-11-30 23:13:14" itemprop="dateModified" datetime="2023-11-30T23:13:14+08:00">2023-11-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="第九章第5题">第九章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取a,b\in G，
+\\&amp;\left(1\right)证充分性：
+\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
+\\&amp;则abab=aabb
+\\&amp;则ba=ab，满足交换律，
+\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
+\\&amp;\left(2\right)证必要性：
+\\&amp;G为阿贝尔群,则G中元素满足交换律
+\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
+\\&amp;对任意a,b\in G，群操作得以保持，
+\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第6题">第九章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
+\\&amp;设g为G的生成元，g在H的映射为\phi (g)
+\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
+\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
+\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
+\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
+\\&amp;因为G为循环群，存在i，g&#39;=g^i
+\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
+\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
+\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
+\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
+\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
+\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
+\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
+\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
+\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
+\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
+(g_1)
+\\&amp;\phi (G)满足交换律，为交换群
+\\&amp;所以G是交换群时\phi (G)也是交换群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第7题">第九章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
+\\&amp;\left(1\right)g\in H：
+\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
+\\&amp;则gH=Hg=H
+\\&amp;\left(2\right)g\in K：
+\\&amp;g\not\in H，gH\ne H，Hg\ne H
+\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
+\\&amp;所以，gH=Hg
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第8题">第九章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
+\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
+\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
+\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
+\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第9题">第九章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
+\\&amp;需证G/H=&lt;gH&gt;
+\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
+\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
+\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
+\\&amp;G/H\subset &lt;gH&gt;
+\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
+\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
+\\&amp;对任意g^iH\in &lt;gH&gt;,
+\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
+\\&amp;所以g^i\in G
+\\&amp;所以g^iH\in G/H
+\\&amp;可得&lt;gH&gt;\subset G/H
+\\&amp;所以，G/H=&lt;gH&gt;，得证
+\end{aligned}
+\]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第四个作业完成！</strong><br/></p>
 

@@ -115,120 +115,6 @@ C
       </tags>
   </entry>
   <entry>
-    <title>第三次作业</title>
-    <url>/2023/11/01/homework3/</url>
-    <content><![CDATA[<h2 id="第六章第7题">第六章第7题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;证明g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
-\\&amp;因为G是群，若g_0 g_1 · · · g_n的逆元是g^{−1}_n· ·
-·g^{−1}_1g^{−1}_0，
-\\&amp;则g^{−1}_n· · ·g^{−1}_1g^{−1}_0的逆元是g_0 g_1 · · · g_n，
-\\&amp;因此该问题可转化为求(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · ·
-g_n)=e。
-\\&amp;由群公理的逆元可知，任取g\in G，g\bullet g^{-1}=e，e为单位元
-\\&amp;又由群公理的结合律，
-\\&amp;(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · · g_n)
-\\&amp;=g^{−1}_n· · ·g^{−1}_1(g^{−1}_0\bullet g_0 )g_1 · · · g_n
-\\&amp;=g^{−1}_n· · ·g^{−1}_2(g^{−1}_1\bullet  g_1)g_2 · · · g_n
-\\&amp; · · ·
-\\&amp;=g^{−1}_n\bullet g_n
-\\&amp;=e
-\\&amp;所以，g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
-\end{aligned}
-\]</span></p>
-<h2 id="第六章第8题">第六章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;证任意群G的两个子群的交集也是群G的子群。
-\\&amp;设群G的两个子群为H_1和H_2，交集为H。
-\\&amp;\left(1\right)证封闭性：
-\\&amp;任取g_1,g_2\in H，则g_1,g_2\in H_1，g_1,g_2\in H_2。
-\\&amp;因为H_1和H_2为群，由封闭性，g_1\bullet g_2\in H_1，g_1\bullet
-g_2\in H_2
-\\&amp;所以g_1\bullet g_2\in H，H满足封闭性。
-\\&amp;\left(2\right)证结合律：
-\\&amp;任取g_1,g_2,g_3\in H，则g_1,g_2,g_3\in H_1，g_1,g_2,g_3\in H_2。
-\\&amp;因为H_1和H_2为群，由结合律，(g_1\bullet g_2)\bullet
-g_3=g_1\bullet (g_2\bullet g_3)，H满足结合律。
-\\&amp;\left(3\right)证单位元：
-\\&amp;因为H_1和H_2为群，由群公理的单位元存在定理，
-\\&amp;e\in H_1,e\in H_2,则e\in H,H中存在单位元。
-\\&amp;\left(4\right)证逆元：
-\\&amp;任取g\in H，则g\in H_1，g\in H_2。
-\\&amp;因为H_1和H_2为群，由群公理的逆元存在定理，g^{-1}\in H_1,g^{-1}\in
-H_2,
-\\&amp;则g^{-1}\in H,H中存在任意元素的逆元。
-\\&amp;综上可知，H满足群公理的所有条件，则
-\\&amp;任意群G的两个子群的交集也是群G的子群。
-\end{aligned}
-\]</span></p>
-<h2 id="第六章第9题">第六章第9题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;证伪：任意群 G 的两个子群的并集也是群 G 的子群。
-\\&amp;取群G为Z，设两个子群为2Z和3Z，并集为Z_1=2Z \cup 3Z
-\\&amp;证封闭性：
-\\&amp;2Z的元素2，3Z的元素3，2+3=5
-\\&amp;因为5\equiv1(mod\quad2)，5\equiv2(mod\quad3)
-\\&amp;所以5\notin 2Z且5\notin 3Z
-\\&amp;则5\notin Z_1
-\\&amp;Z_1不满足群公理的封闭性
-\\&amp;任意群 G 的两个子群的并集不一定是群 G 的子群。
-\end{aligned}
-\]</span></p>
-<h2 id="第六章第10题">第六章第10题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;\left(一\right)G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in
-K\rbrace 是群 G 的子群:
-\\&amp;\left(1\right)证封闭性：
-\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
-\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
-\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
-\\&amp;因为G为阿贝尔群，由交换律，h_1k_1\bullet h_2k_2=h_1h_2\bullet
-k_1k_2，h_1h_2\bullet k_1k_2\in G
-\\&amp;由封闭性，h_1h_2\in H,k_1k_2\in K
-\\&amp;所以h_1h_2\bullet k_1k_2\in HK，HK满足封闭性
-\\&amp;\left(2\right)证结合律：
-\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
-\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
-\\&amp;任取h_3k_3\in HK，h3\in G,k3\in G,h_3k_3\in G
-\\&amp;因为G为群，由结合律，(h_1k_1\bullet h_2k_2)\bullet
-h_3k_3=h_1k_1\bullet (h_2k_2\bullet h_3k_3)，HK满足结合律
-\\&amp;\left(3\right)证单位元：
-\\&amp;因为H和K为群，由群公理的单位元存在定理
-\\&amp;e\in H,e\in K,则e\bullet e=e
-\\&amp;所以e\in HK,HK中存在单位元。
-\\&amp;\left(4\right)证逆元：
-\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
-\\&amp;因为G为群，由群公理的逆元存在定理，(h_1k_1)^{-1}\in G
-\\&amp;因为h_1k_1^{-1}=k_1^{-1}h_1^{-1}，所以k_1^{-1}h_1^{-1}\in G
-\\&amp;因为G为阿贝尔群，由交换律，k_1^{-1}h_1^{-1}=h_1^{-1}k_1^{-1}
-\\&amp;因为H，K为群，由群公理的逆元存在定理，h_1^{-1}\in H,k_1^{-1}\in K
-\\&amp;h_1^{-1}k_1^{-1}\in HK，所以HK中存在任意元素的逆元。
-\\&amp;综上可知，HK满足群公理的所有条件，则
-\\&amp;G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in K\rbrace 是群 G
-的子群
-\\&amp;\left(二\right)G 不是阿贝尔群，HK = \lbrace hk : h\in H, k\in
-K\rbrace 是群 G 的子群:
-\\&amp;证封闭性：
-\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
-\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
-\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
-\\&amp;因为G不为阿贝尔群，所以该式不满足交换律
-\\&amp;故无法证h_1k_1\bullet h_2k_2\in HK，HK不满足封闭性
-\\&amp;HK不满足群公理的封闭性
-\\&amp;G 不是阿贝尔群， HK = \lbrace hk : h\in H, k\in K\rbrace 不是群 G
-的子群
-\end{aligned}
-\]</span> ## 结语 <strong>我博客上第三个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第二次作业</title>
     <url>/2023/10/17/homework2/</url>
     <content><![CDATA[<h1 id="编程题">编程题</h1>
@@ -397,6 +283,213 @@ g^n = 1，
 \]</span></p>
 <h2 id="第八章第9题">第八章第9题</h2>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(a)+<span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">PrimeFatorsList</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span>* list)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list_count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (num % i == <span class="number">0</span> &amp;&amp; <span class="built_in">IsPrime</span>(i))</span><br><span class="line">		&#123;</span><br><span class="line">			list[list_count] = i;</span><br><span class="line">			list_count++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> list_count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">IsPrimitiveRoot</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> p)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> list[<span class="number">1000</span>];</span><br><span class="line">	<span class="type">int</span> list_count = <span class="built_in">PrimeFatorsList</span>(p - <span class="number">1</span>, list);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; list_count; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> tempy = (p - <span class="number">1</span>) / list[i];</span><br><span class="line">		<span class="type">int</span> temp = <span class="built_in">pow</span>(a, tempy);</span><br><span class="line">		<span class="keyword">if</span> (temp % p == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">FindMinGenerator</span><span class="params">(<span class="type">int</span> p)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= p - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">IsPrimitiveRoot</span>(i, p))</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">FindMinGen</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> max_min_gen = <span class="number">0</span>; </span><br><span class="line">	<span class="type">int</span> max_min_gen_of_num = <span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!<span class="built_in">IsPrime</span>(i))</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		<span class="type">int</span> min_gen = <span class="built_in">FindMinGen</span>(i);</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;素数&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;的最小生成元为&quot;</span> &lt;&lt; min_gen &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">if</span> (min_gen &gt; max_min_gen)</span><br><span class="line">		&#123;</span><br><span class="line">			max_min_gen = min_gen;</span><br><span class="line">			max_min_gen_of_num = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;最小生成元集合中最大者对应的数字为&quot;</span> &lt;&lt; max_min_gen_of_num &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第四个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第三次作业</title>
+    <url>/2023/11/01/homework3/</url>
+    <content><![CDATA[<h2 id="第六章第7题">第六章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证明g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
+\\&amp;因为G是群，若g_0 g_1 · · · g_n的逆元是g^{−1}_n· ·
+·g^{−1}_1g^{−1}_0，
+\\&amp;则g^{−1}_n· · ·g^{−1}_1g^{−1}_0的逆元是g_0 g_1 · · · g_n，
+\\&amp;因此该问题可转化为求(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · ·
+g_n)=e。
+\\&amp;由群公理的逆元可知，任取g\in G，g\bullet g^{-1}=e，e为单位元
+\\&amp;又由群公理的结合律，
+\\&amp;(g^{−1}_n· · ·g^{−1}_1g^{−1}_0)(g_0 g_1 · · · g_n)
+\\&amp;=g^{−1}_n· · ·g^{−1}_1(g^{−1}_0\bullet g_0 )g_1 · · · g_n
+\\&amp;=g^{−1}_n· · ·g^{−1}_2(g^{−1}_1\bullet  g_1)g_2 · · · g_n
+\\&amp; · · ·
+\\&amp;=g^{−1}_n\bullet g_n
+\\&amp;=e
+\\&amp;所以，g_0 g_1 · · · g_n的逆元是g^{−1}_n· · ·g^{−1}_1g^{−1}_0。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第8题">第六章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证任意群G的两个子群的交集也是群G的子群。
+\\&amp;设群G的两个子群为H_1和H_2，交集为H。
+\\&amp;\left(1\right)证封闭性：
+\\&amp;任取g_1,g_2\in H，则g_1,g_2\in H_1，g_1,g_2\in H_2。
+\\&amp;因为H_1和H_2为群，由封闭性，g_1\bullet g_2\in H_1，g_1\bullet
+g_2\in H_2
+\\&amp;所以g_1\bullet g_2\in H，H满足封闭性。
+\\&amp;\left(2\right)证结合律：
+\\&amp;任取g_1,g_2,g_3\in H，则g_1,g_2,g_3\in H_1，g_1,g_2,g_3\in H_2。
+\\&amp;因为H_1和H_2为群，由结合律，(g_1\bullet g_2)\bullet
+g_3=g_1\bullet (g_2\bullet g_3)，H满足结合律。
+\\&amp;\left(3\right)证单位元：
+\\&amp;因为H_1和H_2为群，由群公理的单位元存在定理，
+\\&amp;e\in H_1,e\in H_2,则e\in H,H中存在单位元。
+\\&amp;\left(4\right)证逆元：
+\\&amp;任取g\in H，则g\in H_1，g\in H_2。
+\\&amp;因为H_1和H_2为群，由群公理的逆元存在定理，g^{-1}\in H_1,g^{-1}\in
+H_2,
+\\&amp;则g^{-1}\in H,H中存在任意元素的逆元。
+\\&amp;综上可知，H满足群公理的所有条件，则
+\\&amp;任意群G的两个子群的交集也是群G的子群。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第9题">第六章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;证伪：任意群 G 的两个子群的并集也是群 G 的子群。
+\\&amp;取群G为Z，设两个子群为2Z和3Z，并集为Z_1=2Z \cup 3Z
+\\&amp;证封闭性：
+\\&amp;2Z的元素2，3Z的元素3，2+3=5
+\\&amp;因为5\equiv1(mod\quad2)，5\equiv2(mod\quad3)
+\\&amp;所以5\notin 2Z且5\notin 3Z
+\\&amp;则5\notin Z_1
+\\&amp;Z_1不满足群公理的封闭性
+\\&amp;任意群 G 的两个子群的并集不一定是群 G 的子群。
+\end{aligned}
+\]</span></p>
+<h2 id="第六章第10题">第六章第10题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in
+K\rbrace 是群 G 的子群:
+\\&amp;\left(1\right)证封闭性：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
+\\&amp;因为G为阿贝尔群，由交换律，h_1k_1\bullet h_2k_2=h_1h_2\bullet
+k_1k_2，h_1h_2\bullet k_1k_2\in G
+\\&amp;由封闭性，h_1h_2\in H,k_1k_2\in K
+\\&amp;所以h_1h_2\bullet k_1k_2\in HK，HK满足封闭性
+\\&amp;\left(2\right)证结合律：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;任取h_3k_3\in HK，h3\in G,k3\in G,h_3k_3\in G
+\\&amp;因为G为群，由结合律，(h_1k_1\bullet h_2k_2)\bullet
+h_3k_3=h_1k_1\bullet (h_2k_2\bullet h_3k_3)，HK满足结合律
+\\&amp;\left(3\right)证单位元：
+\\&amp;因为H和K为群，由群公理的单位元存在定理
+\\&amp;e\in H,e\in K,则e\bullet e=e
+\\&amp;所以e\in HK,HK中存在单位元。
+\\&amp;\left(4\right)证逆元：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;因为G为群，由群公理的逆元存在定理，(h_1k_1)^{-1}\in G
+\\&amp;因为h_1k_1^{-1}=k_1^{-1}h_1^{-1}，所以k_1^{-1}h_1^{-1}\in G
+\\&amp;因为G为阿贝尔群，由交换律，k_1^{-1}h_1^{-1}=h_1^{-1}k_1^{-1}
+\\&amp;因为H，K为群，由群公理的逆元存在定理，h_1^{-1}\in H,k_1^{-1}\in K
+\\&amp;h_1^{-1}k_1^{-1}\in HK，所以HK中存在任意元素的逆元。
+\\&amp;综上可知，HK满足群公理的所有条件，则
+\\&amp;G 是阿贝尔群，证 HK = \lbrace hk : h\in H, k\in K\rbrace 是群 G
+的子群
+\\&amp;\left(二\right)G 不是阿贝尔群，HK = \lbrace hk : h\in H, k\in
+K\rbrace 是群 G 的子群:
+\\&amp;证封闭性：
+\\&amp;任取h_1k_1\in HK，h1\in G,k1\in G,h_1k_1\in G
+\\&amp;任取h_2k_2\in HK，h2\in G,k2\in G,h_2k_2\in G
+\\&amp;因为G为群，由封闭性，h_1k_1\bullet h_2k_2\in G
+\\&amp;因为G不为阿贝尔群，所以该式不满足交换律
+\\&amp;故无法证h_1k_1\bullet h_2k_2\in HK，HK不满足封闭性
+\\&amp;HK不满足群公理的封闭性
+\\&amp;G 不是阿贝尔群， HK = \lbrace hk : h\in H, k\in K\rbrace 不是群 G
+的子群
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第三个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第四次作业</title>
+    <url>/2023/11/22/homework5/</url>
+    <content><![CDATA[<h2 id="第九章第5题">第九章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取a,b\in G，
+\\&amp;\left(1\right)证充分性：
+\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
+\\&amp;则abab=aabb
+\\&amp;则ba=ab，满足交换律，
+\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
+\\&amp;\left(2\right)证必要性：
+\\&amp;G为阿贝尔群,则G中元素满足交换律
+\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
+\\&amp;对任意a,b\in G，群操作得以保持，
+\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第6题">第九章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
+\\&amp;设g为G的生成元，g在H的映射为\phi (g)
+\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
+\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
+\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
+\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
+\\&amp;因为G为循环群，存在i，g&#39;=g^i
+\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
+\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
+\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
+\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
+\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
+\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
+\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
+\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
+\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
+\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
+(g_1)
+\\&amp;\phi (G)满足交换律，为交换群
+\\&amp;所以G是交换群时\phi (G)也是交换群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第7题">第九章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
+\\&amp;\left(1\right)g\in H：
+\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
+\\&amp;则gH=Hg=H
+\\&amp;\left(2\right)g\in K：
+\\&amp;g\not\in H，gH\ne H，Hg\ne H
+\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
+\\&amp;所以，gH=Hg
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第8题">第九章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
+\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
+\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
+\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
+\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第9题">第九章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
+\\&amp;需证G/H=&lt;gH&gt;
+\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
+\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
+\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
+\\&amp;G/H\subset &lt;gH&gt;
+\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
+\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
+\\&amp;对任意g^iH\in &lt;gH&gt;,
+\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
+\\&amp;所以g^i\in G
+\\&amp;所以g^iH\in G/H
+\\&amp;可得&lt;gH&gt;\subset G/H
+\\&amp;所以，G/H=&lt;gH&gt;，得证
+\end{aligned}
+\]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第四个作业完成！</strong><br/></p>
 ]]></content>
