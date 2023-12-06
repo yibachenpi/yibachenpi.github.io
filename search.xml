@@ -87,6 +87,34 @@ C
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/08/20/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>第二次作业</title>
     <url>/2023/10/17/homework2/</url>
     <content><![CDATA[<h1 id="编程题">编程题</h1>
@@ -155,34 +183,6 @@ id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆�
       <tags>
         <tag>-作业</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/08/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>第三次作业</title>
@@ -293,99 +293,6 @@ K\rbrace 是群 G 的子群:
 的子群
 \end{aligned}
 \]</span> ## 结语 <strong>我博客上第三个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第五次作业</title>
-    <url>/2023/11/30/homework5/</url>
-    <content><![CDATA[<h2 id="第九章第5题">第九章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;任取a,b\in G，
-\\&amp;\left(1\right)证充分性：
-\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
-\\&amp;则abab=aabb
-\\&amp;则ba=ab，满足交换律，
-\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
-\\&amp;\left(2\right)证必要性：
-\\&amp;G为阿贝尔群,则G中元素满足交换律
-\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
-\\&amp;对任意a,b\in G，群操作得以保持，
-\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第6题">第九章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
-\\&amp;设g为G的生成元，g在H的映射为\phi (g)
-\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
-\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
-\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
-\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
-\\&amp;因为G为循环群，存在i，g&#39;=g^i
-\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
-\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
-\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
-\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
-\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
-\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
-\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
-\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
-\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
-\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
-(g_1)
-\\&amp;\phi (G)满足交换律，为交换群
-\\&amp;所以G是交换群时\phi (G)也是交换群
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第7题">第九章第7题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
-\\&amp;\left(1\right)g\in H：
-\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
-\\&amp;则gH=Hg=H
-\\&amp;\left(2\right)g\in K：
-\\&amp;g\not\in H，gH\ne H，Hg\ne H
-\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
-\\&amp;所以，gH=Hg
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第8题">第九章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
-\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
-\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
-\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
-\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第9题">第九章第9题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
-\\&amp;需证G/H=&lt;gH&gt;
-\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
-\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
-\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
-\\&amp;G/H\subset &lt;gH&gt;
-\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
-\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
-\\&amp;对任意g^iH\in &lt;gH&gt;,
-\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
-\\&amp;所以g^i\in G
-\\&amp;所以g^iH\in G/H
-\\&amp;可得&lt;gH&gt;\subset G/H
-\\&amp;所以，G/H=&lt;gH&gt;，得证
-\end{aligned}
-\]</span></p>
-<h2 id="结语">结语</h2>
-<p><strong>我博客上第五个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
@@ -547,6 +454,99 @@ mod\quad13=3
 \]</span></p>
 <h2 id="第十章第7题">第十章第7题</h2>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//求乘法逆元</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ReverseNum</span><span class="params">(<span class="type">int</span> m, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> ((m * i) % b != <span class="number">1</span>) &#123;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">if</span> (i &gt;= b) &#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;求逆元失败！&quot;</span> &lt;&lt; endl;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n, M = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;请输入同余方程的个数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="type">int</span>* a = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* m = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入第&quot;</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">&quot;个方程的余数和模数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; a[i] &gt;&gt; m[i];</span><br><span class="line">		M *= m[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		b[i] = M / m[i];</span><br><span class="line">		m[i] = <span class="built_in">ReverseNum</span>(b[i],m[i]);<span class="comment">//m[i]空间再次利用</span></span><br><span class="line">		sum += a[i] * m[i] * b[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[]a;</span><br><span class="line">	<span class="keyword">delete</span>[]b;</span><br><span class="line">	<span class="keyword">delete</span>[]m;</span><br><span class="line">	sum = sum % M;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;运用CRT求解同余方程的结果为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第五个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五次作业</title>
+    <url>/2023/11/30/homework5/</url>
+    <content><![CDATA[<h2 id="第九章第5题">第九章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取a,b\in G，
+\\&amp;\left(1\right)证充分性：
+\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
+\\&amp;则abab=aabb
+\\&amp;则ba=ab，满足交换律，
+\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
+\\&amp;\left(2\right)证必要性：
+\\&amp;G为阿贝尔群,则G中元素满足交换律
+\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
+\\&amp;对任意a,b\in G，群操作得以保持，
+\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第6题">第九章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
+\\&amp;设g为G的生成元，g在H的映射为\phi (g)
+\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
+\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
+\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
+\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
+\\&amp;因为G为循环群，存在i，g&#39;=g^i
+\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
+\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
+\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
+\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
+\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
+\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
+\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
+\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
+\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
+\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
+(g_1)
+\\&amp;\phi (G)满足交换律，为交换群
+\\&amp;所以G是交换群时\phi (G)也是交换群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第7题">第九章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
+\\&amp;\left(1\right)g\in H：
+\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
+\\&amp;则gH=Hg=H
+\\&amp;\left(2\right)g\in K：
+\\&amp;g\not\in H，gH\ne H，Hg\ne H
+\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
+\\&amp;所以，gH=Hg
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第8题">第九章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
+\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
+\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
+\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
+\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第9题">第九章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
+\\&amp;需证G/H=&lt;gH&gt;
+\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
+\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
+\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
+\\&amp;G/H\subset &lt;gH&gt;
+\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
+\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
+\\&amp;对任意g^iH\in &lt;gH&gt;,
+\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
+\\&amp;所以g^i\in G
+\\&amp;所以g^iH\in G/H
+\\&amp;可得&lt;gH&gt;\subset G/H
+\\&amp;所以，G/H=&lt;gH&gt;，得证
+\end{aligned}
+\]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第五个作业完成！</strong><br/></p>
 ]]></content>
