@@ -29,6 +29,76 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
+    <title>第二次作业</title>
+    <url>/2023/10/17/homework2/</url>
+    <content><![CDATA[<h1 id="编程题">编程题</h1>
+<h2
+id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2
+id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="计算题">计算题</h1>
+<h2 id="第四章第1题">第四章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
+\\&amp;又由模指数运算和2019取模于22=17,可得
+\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
+\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
+\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
+\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
+\\&amp;所以 3^{2019}\quad mod\quad23=16
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第5题">第四章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
+\\&amp;又由模指数运算可得
+\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
+\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
+\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
+\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
+\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
+\\&amp;又由模指数运算可得，
+\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
+\\&amp;13整除2^{70}+3^{70}
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第6题">第四章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;由欧拉定理
+\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
+\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
+\\&amp;\phi (5)=4，\phi (11)=10
+\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
+\\&amp;因为40整除100000，
+\\&amp;所以2^{100000}\equiv1(mod\quad55)
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第8题">第四章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
+\\&amp;由欧拉定理
+\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
+\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
+\\&amp;\phi (25)=20，\phi (4)=2
+\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
+\\&amp;因为40整除1000，
+\\&amp;所以7^{1000}\equiv1(mod\quad100)
+\\&amp;7^{1000}的最后两个数位是01
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一次作业</title>
     <url>/2023/09/19/homework1/</url>
     <content><![CDATA[<h2
@@ -109,76 +179,6 @@ C
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第一个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二次作业</title>
-    <url>/2023/10/17/homework2/</url>
-    <content><![CDATA[<h1 id="编程题">编程题</h1>
-<h2
-id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
-mod m，即a的b次方模m。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2
-id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="计算题">计算题</h1>
-<h2 id="第四章第1题">第四章第1题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
-\\&amp;又由模指数运算和2019取模于22=17,可得
-\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
-\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
-\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
-\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
-\\&amp;所以 3^{2019}\quad mod\quad23=16
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第5题">第四章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
-\\&amp;又由模指数运算可得
-\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
-\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
-\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
-\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
-\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
-\\&amp;又由模指数运算可得，
-\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
-\\&amp;13整除2^{70}+3^{70}
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第6题">第四章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;由欧拉定理
-\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
-\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
-\\&amp;\phi (5)=4，\phi (11)=10
-\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
-\\&amp;因为40整除100000，
-\\&amp;所以2^{100000}\equiv1(mod\quad55)
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第8题">第四章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
-\\&amp;由欧拉定理
-\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
-\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
-\\&amp;\phi (25)=20，\phi (4)=2
-\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
-\\&amp;因为40整除1000，
-\\&amp;所以7^{1000}\equiv1(mod\quad100)
-\\&amp;7^{1000}的最后两个数位是01
-\end{aligned}
-\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
@@ -299,99 +299,6 @@ K\rbrace 是群 G 的子群:
       </tags>
   </entry>
   <entry>
-    <title>第五次作业</title>
-    <url>/2023/11/30/homework5/</url>
-    <content><![CDATA[<h2 id="第九章第5题">第九章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;任取a,b\in G，
-\\&amp;\left(1\right)证充分性：
-\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
-\\&amp;则abab=aabb
-\\&amp;则ba=ab，满足交换律，
-\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
-\\&amp;\left(2\right)证必要性：
-\\&amp;G为阿贝尔群,则G中元素满足交换律
-\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
-\\&amp;对任意a,b\in G，群操作得以保持，
-\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第6题">第九章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
-\\&amp;设g为G的生成元，g在H的映射为\phi (g)
-\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
-\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
-\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
-\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
-\\&amp;因为G为循环群，存在i，g&#39;=g^i
-\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
-\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
-\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
-\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
-\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
-\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
-\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
-\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
-\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
-\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
-(g_1)
-\\&amp;\phi (G)满足交换律，为交换群
-\\&amp;所以G是交换群时\phi (G)也是交换群
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第7题">第九章第7题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
-\\&amp;\left(1\right)g\in H：
-\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
-\\&amp;则gH=Hg=H
-\\&amp;\left(2\right)g\in K：
-\\&amp;g\not\in H，gH\ne H，Hg\ne H
-\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
-\\&amp;所以，gH=Hg
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第8题">第九章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
-\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
-\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
-\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
-\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
-\end{aligned}
-\]</span></p>
-<h2 id="第九章第9题">第九章第9题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
-\\&amp;需证G/H=&lt;gH&gt;
-\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
-\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
-\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
-\\&amp;G/H\subset &lt;gH&gt;
-\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
-\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
-\\&amp;对任意g^iH\in &lt;gH&gt;,
-\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
-\\&amp;所以g^i\in G
-\\&amp;所以g^iH\in G/H
-\\&amp;可得&lt;gH&gt;\subset G/H
-\\&amp;所以，G/H=&lt;gH&gt;，得证
-\end{aligned}
-\]</span></p>
-<h2 id="结语">结语</h2>
-<p><strong>我博客上第五个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第四次作业</title>
     <url>/2023/11/22/homework4/</url>
     <content><![CDATA[<h2 id="第七章第2题">第七章第2题</h2>
@@ -498,6 +405,156 @@ g^n = 1，
       </tags>
   </entry>
   <entry>
+    <title>第六次作业</title>
+    <url>/2023/12/06/homework6/</url>
+    <content><![CDATA[<h2 id="第十章第1题">第十章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;11与19互素，设a=8,p=11,b=3,q=19
+\\&amp;则由中国剩余定理的推理，可得
+\\&amp;n=pq=209
+\\&amp;所求x=a*q*q^{-1}+b*p*p^{-1}(mod\quad n)
+\\&amp;qq^{-1}\equiv1(mod\quad 19)
+\\&amp;q^{-1}=7
+\\&amp;pp^{-1}\equiv1(mod\quad 11)
+\\&amp;p^{-1}=7
+\\&amp;x=a*q*q^{-1}+b*p*p^{-1}(mod\quad n)=41
+\\&amp;所求x=41
+\end{aligned}
+\]</span></p>
+<h2 id="第十章第2题">第十章第2题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;设m_0=5,m_1=7,m_2=9,m_3=11,M=5*7*9*11=3465
+\\&amp;a=5,b=7,c=9,d=11
+\\&amp;记b_0=M/m_0=693, b_1=M/m_1=495
+\\&amp;b_2=M/m_2=385,b_3=M/m_3=315
+\\&amp;则b_ib_i^{-1}\equiv1(mod\quad m_i),i=0,1,2,3
+\\&amp;求得b_0^{-1}=2,b_1^{-1}=3,b_2^{-1}=4,b_3^{-1}=8
+\\&amp;由中国剩余定理的推广得，
+\\&amp;x=ab_0b_0^{-1}+bb_1b_1^{-1}+cb_2b_2^{-1}+db_3b_3^{-1}(mod\quad
+M)=1731
+\end{aligned}
+\]</span></p>
+<h2 id="第十章第3题">第十章第3题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为221=13*17，13和17互质
+\\&amp;2000\equiv11(mod 13),2000\equiv11(mod 17)
+\\&amp;2000\leftrightarrow(11,11),
+\\&amp;2000\leftrightarrow(-2,-6),
+\\&amp;因为(-2)^{12}\equiv1(mod\quad 13),2019=12*108+3,(-2)^3
+mod\quad13=5
+\\&amp;(-6)^8\equiv1(mod\quad 17),2019=8*252+3,(-6)^3 mod\quad17=5
+\\&amp;2000^{2019}\leftrightarrow(5,5)
+\\&amp;13*13^{-1}\equiv1(mod\quad 17),17*17^{-1}\equiv1(mod\quad 13)
+\\&amp;13^{-1}=4,17^{-1}=10
+\\&amp;2000^{2019}=5*17*10+5*13*4(mod\quad221)=5
+\end{aligned}
+\]</span></p>
+<h2 id="第十章第7题">第十章第7题</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//求乘法逆元</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ReverseNum</span><span class="params">(<span class="type">int</span> m, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> ((m * i) % b != <span class="number">1</span>) &#123;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">if</span> (i &gt;= b) &#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;求逆元失败！&quot;</span> &lt;&lt; endl;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n, M = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;请输入同余方程的个数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="type">int</span>* a = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* m = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入第&quot;</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">&quot;个方程的余数和模数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; a[i] &gt;&gt; m[i];</span><br><span class="line">		M *= m[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		b[i] = M / m[i];</span><br><span class="line">		m[i] = <span class="built_in">ReverseNum</span>(b[i],m[i]);<span class="comment">//m[i]空间再次利用</span></span><br><span class="line">		sum += a[i] * m[i] * b[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[]a;</span><br><span class="line">	<span class="keyword">delete</span>[]b;</span><br><span class="line">	<span class="keyword">delete</span>[]m;</span><br><span class="line">	sum = sum % M;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;运用CRT求解同余方程的结果为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第六个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第五次作业</title>
+    <url>/2023/11/30/homework5/</url>
+    <content><![CDATA[<h2 id="第九章第5题">第九章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取a,b\in G，
+\\&amp;\left(1\right)证充分性：
+\\&amp;由群同态定义，\phi (ab)=\phi (a)\phi (b)
+\\&amp;则abab=aabb
+\\&amp;则ba=ab，满足交换律，
+\\&amp;\phi 是一种群同态时G为阿贝尔群，充分性得证
+\\&amp;\left(2\right)证必要性：
+\\&amp;G为阿贝尔群,则G中元素满足交换律
+\\&amp;则\phi (ab)=(ab)^2=abab=aabb=\phi (a)\phi (b)
+\\&amp;对任意a,b\in G，群操作得以保持，
+\\&amp;G为阿贝尔群时\phi 是一种群同态，必要性得证
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第6题">第九章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;\left(一\right)证G是循环群时\phi (G)也是循环群：
+\\&amp;设g为G的生成元，g在H的映射为\phi (g)
+\\&amp;\phi (G)=&lt;\phi (g)&gt;时，\phi (G)是循环群
+\\&amp;需证\phi (G)=&lt;\phi (g)&gt;
+\\&amp;\left(1\right)证\phi (G)\subset &lt;\phi (g)&gt;：
+\\&amp;任取\phi (g&#39;)\in \phi (G)，则g&#39;\in G
+\\&amp;因为G为循环群，存在i，g&#39;=g^i
+\\&amp;所以\phi (g&#39;)=\phi (g^i)=(\phi (g))^{i}\in &lt;\phi (g)&gt;
+\\&amp;所以\phi (G)\subset &lt;\phi (g)&gt;
+\\&amp;\left(1\right)证&lt;\phi (g)&gt;\subset \phi (G)：
+\\&amp;任取(\phi (g))^{i}\in &lt;\phi (g)&gt;，(\phi (g))^{i}=\phi (g^i)
+\\&amp;因为G为循环群，g^i\in G, \phi (g^i)\in \phi (G)
+\\&amp;(\phi (g))^{i}\in \phi (G),所以&lt;\phi (g)&gt;\subset \phi (G)
+\\&amp;所以\phi (G)=&lt;\phi (g)&gt;，G是循环群时\phi (G)也是循环群
+\\&amp;\left(二\right)证G是交换群时\phi (G)也是交换群：
+\\&amp;因为G是交换群，任取g_1,g_2\in G, g_1g_2=g_2g_1
+\\&amp;\phi (g_1)\phi (g_2)=\phi (g_1g_2)=\phi (g_2g_1)=\phi (g_2)\phi
+(g_1)
+\\&amp;\phi (G)满足交换律，为交换群
+\\&amp;所以G是交换群时\phi (G)也是交换群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第7题">第九章第7题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为[G:H]=2，所以H在G上有两个左陪集，令与H不同的陪集为K
+\\&amp;\left(1\right)g\in H：
+\\&amp;由群公理的封闭性，任取h\in H,gh\in H,hg\in H
+\\&amp;则gH=Hg=H
+\\&amp;\left(2\right)g\in K：
+\\&amp;g\not\in H，gH\ne H，Hg\ne H
+\\&amp;则由陪集的同一或不相交性，gH=Hg=G-H
+\\&amp;所以，gH=Hg
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第8题">第九章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;任取g_1,g_2\in G,则g_2H,g_2H\in G/H
+\\&amp;因为H是群G的正规子群，则g_1H=Hg_1,g_2H=Hg_2
+\\&amp;又因为G为阿贝尔群,则g_1,g_2满足交换律
+\\&amp;所以g_1Hg_2H=g_1g_2HH=g_2g_1HH=g_2Hg_1H
+\\&amp;商群G/H满足交换律，所以商群G/H也是阿贝尔群
+\end{aligned}
+\]</span></p>
+<h2 id="第九章第9题">第九章第9题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为G是循环群，所以G=&lt;g&gt;,若G/H也是循环群，则G/H=&lt;gH&gt;
+\\&amp;需证G/H=&lt;gH&gt;
+\\&amp;\left(1\right)证G/H\subset &lt;gH&gt;：
+\\&amp;G/H=\{g_1H,g_2H,...,g_nH\}
+\\&amp;对任意g_iH\in G/H,g_iH\in &lt;gH&gt;
+\\&amp;G/H\subset &lt;gH&gt;
+\\&amp;\left(2\right)证&lt;gH&gt;\subset G/H：
+\\&amp;(gH)^i=g^iH,所以&lt;gH&gt;=\{g^1H,g^2H,...,g^nH\}
+\\&amp;对任意g^iH\in &lt;gH&gt;,
+\\&amp;因为G为循环群，G=\{g^1,g^2,...,g^n\}
+\\&amp;所以g^i\in G
+\\&amp;所以g^iH\in G/H
+\\&amp;可得&lt;gH&gt;\subset G/H
+\\&amp;所以，G/H=&lt;gH&gt;，得证
+\end{aligned}
+\]</span></p>
+<h2 id="结语">结语</h2>
+<p><strong>我博客上第五个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第七次作业</title>
     <url>/2023/12/21/homework7/</url>
     <content><![CDATA[<h2 id="第十一章第4题">第十一章第4题</h2>
@@ -568,63 +625,6 @@ p)，则b也为QNR，(\frac{a}{p})=(\frac{b}{p})=-1
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第七个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第六次作业</title>
-    <url>/2023/12/06/homework6/</url>
-    <content><![CDATA[<h2 id="第十章第1题">第十章第1题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;11与19互素，设a=8,p=11,b=3,q=19
-\\&amp;则由中国剩余定理的推理，可得
-\\&amp;n=pq=209
-\\&amp;所求x=a*q*q^{-1}+b*p*p^{-1}(mod\quad n)
-\\&amp;qq^{-1}\equiv1(mod\quad 19)
-\\&amp;q^{-1}=7
-\\&amp;pp^{-1}\equiv1(mod\quad 11)
-\\&amp;p^{-1}=7
-\\&amp;x=a*q*q^{-1}+b*p*p^{-1}(mod\quad n)=41
-\\&amp;所求x=41
-\end{aligned}
-\]</span></p>
-<h2 id="第十章第2题">第十章第2题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;设m_0=5,m_1=7,m_2=9,m_3=11,M=5*7*9*11=3465
-\\&amp;a=5,b=7,c=9,d=11
-\\&amp;记b_0=M/m_0=693, b_1=M/m_1=495
-\\&amp;b_2=M/m_2=385,b_3=M/m_3=315
-\\&amp;则b_ib_i^{-1}\equiv1(mod\quad m_i),i=0,1,2,3
-\\&amp;求得b_0^{-1}=2,b_1^{-1}=3,b_2^{-1}=4,b_3^{-1}=8
-\\&amp;由中国剩余定理的推广得，
-\\&amp;x=ab_0b_0^{-1}+bb_1b_1^{-1}+cb_2b_2^{-1}+db_3b_3^{-1}(mod\quad
-M)=1731
-\end{aligned}
-\]</span></p>
-<h2 id="第十章第3题">第十章第3题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为221=13*17，13和17互质
-\\&amp;2000\equiv11(mod 13),2000\equiv11(mod 17)
-\\&amp;2000\leftrightarrow(11,11),
-\\&amp;2000\leftrightarrow(-2,-6),
-\\&amp;因为(-2)^{12}\equiv1(mod\quad 13),2019=12*108+3,(-2)^3
-mod\quad13=5
-\\&amp;(-6)^8\equiv1(mod\quad 17),2019=8*252+3,(-6)^3 mod\quad17=5
-\\&amp;2000^{2019}\leftrightarrow(5,5)
-\\&amp;13*13^{-1}\equiv1(mod\quad 17),17*17^{-1}\equiv1(mod\quad 13)
-\\&amp;13^{-1}=4,17^{-1}=10
-\\&amp;2000^{2019}=5*17*10+5*13*4(mod\quad221)=5
-\end{aligned}
-\]</span></p>
-<h2 id="第十章第7题">第十章第7题</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//求乘法逆元</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ReverseNum</span><span class="params">(<span class="type">int</span> m, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> ((m * i) % b != <span class="number">1</span>) &#123;</span><br><span class="line">		i++;</span><br><span class="line">		<span class="keyword">if</span> (i &gt;= b) &#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;求逆元失败！&quot;</span> &lt;&lt; endl;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> n, M = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;请输入同余方程的个数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="type">int</span>* a = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* m = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="type">int</span>* b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入第&quot;</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">&quot;个方程的余数和模数：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; a[i] &gt;&gt; m[i];</span><br><span class="line">		M *= m[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">		b[i] = M / m[i];</span><br><span class="line">		m[i] = <span class="built_in">ReverseNum</span>(b[i],m[i]);<span class="comment">//m[i]空间再次利用</span></span><br><span class="line">		sum += a[i] * m[i] * b[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[]a;</span><br><span class="line">	<span class="keyword">delete</span>[]b;</span><br><span class="line">	<span class="keyword">delete</span>[]m;</span><br><span class="line">	sum = sum % M;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;运用CRT求解同余方程的结果为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="结语">结语</h2>
-<p><strong>我博客上第六个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
