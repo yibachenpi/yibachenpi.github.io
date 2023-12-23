@@ -29,6 +29,76 @@ href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
+    <title>第二次作业</title>
+    <url>/2023/10/17/homework2/</url>
+    <content><![CDATA[<h1 id="编程题">编程题</h1>
+<h2
+id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
+mod m，即a的b次方模m。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2
+id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="计算题">计算题</h1>
+<h2 id="第四章第1题">第四章第1题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
+\\&amp;又由模指数运算和2019取模于22=17,可得
+\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
+\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
+\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
+\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
+\\&amp;所以 3^{2019}\quad mod\quad23=16
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第5题">第四章第5题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
+\\&amp;又由模指数运算可得
+\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
+\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
+\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
+\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
+\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
+\\&amp;又由模指数运算可得，
+\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
+\\&amp;13整除2^{70}+3^{70}
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第6题">第四章第6题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;由欧拉定理
+\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
+\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
+\\&amp;\phi (5)=4，\phi (11)=10
+\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
+\\&amp;因为40整除100000，
+\\&amp;所以2^{100000}\equiv1(mod\quad55)
+\end{aligned}
+\]</span></p>
+<h2 id="第四章第8题">第四章第8题</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
+\\&amp;由欧拉定理
+\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
+\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
+\\&amp;\phi (25)=20，\phi (4)=2
+\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
+\\&amp;因为40整除1000，
+\\&amp;所以7^{1000}\equiv1(mod\quad100)
+\\&amp;7^{1000}的最后两个数位是01
+\end{aligned}
+\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一次作业</title>
     <url>/2023/09/19/homework1/</url>
     <content><![CDATA[<h2
@@ -109,76 +179,6 @@ C
 \]</span></p>
 <h2 id="结语">结语</h2>
 <p><strong>我博客上第一个作业完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-作业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第二次作业</title>
-    <url>/2023/10/17/homework2/</url>
-    <content><![CDATA[<h1 id="编程题">编程题</h1>
-<h2
-id="写一个模指数运算函数mod_exp输入ab和m输出ab-mod-m即a的b次方模m">写一个模指数运算函数Mod_Exp，输入a、b和m，输出a^b
-mod m，即a的b次方模m。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mod_Exp</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> sum;</span><br><span class="line">	<span class="keyword">if</span> (b == <span class="number">0</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	sum = <span class="built_in">Mod_Exp</span>(a, b / <span class="number">2</span>, m);</span><br><span class="line">	<span class="keyword">if</span> (b % <span class="number">2</span> == <span class="number">1</span>)<span class="keyword">return</span>(sum * sum * a) % m;</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">return</span>(sum * sum) % m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, b, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; m;</span><br><span class="line">	cout &lt;&lt; a &lt;&lt; <span class="string">&quot;的&quot;</span> &lt;&lt; b &lt;&lt; <span class="string">&quot;次方模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的结果为：&quot;</span> &lt;&lt; <span class="built_in">Mod_Exp</span>(a, b, m) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2
-id="写一个求乘法逆元的函数mul_inverse输入a和m求a模m的乘法逆元提示要求只输出正整数">写一个求乘法逆元的函数Mul_Inverse，输入a和m，求a模m的乘法逆元。提示，要求只输出正整数。</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Mul_Inverse</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> r0 = <span class="number">1</span>, r1 = <span class="number">0</span>, s0 = <span class="number">0</span>, s1 = <span class="number">1</span>, q = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> z1=<span class="number">0</span>, z2=<span class="number">0</span>, z3=<span class="number">0</span>, z4=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (a!=<span class="number">0</span>) &#123;</span><br><span class="line">		z1 = m / a;</span><br><span class="line">		z2 = a;</span><br><span class="line">		z3 = m%a;</span><br><span class="line">		q = z1; m = z2; a = z3;</span><br><span class="line">		z1 = r1;</span><br><span class="line">		z2 = r0 - q * r1;</span><br><span class="line">		z3 = s1;</span><br><span class="line">		z4 = s0 - q * s1;</span><br><span class="line">		r0 = z1; r1 = z2; s0 = z3; s1 = z4;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s0;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> a, m;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m;</span><br><span class="line">	<span class="type">int</span> a1 = a;</span><br><span class="line">	a = a % m;</span><br><span class="line">	<span class="keyword">if</span> (a &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		a = a + m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> b=<span class="built_in">Mul_Inverse</span>(a, m);</span><br><span class="line">	<span class="keyword">while</span> (b &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		b += m;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; a1 &lt;&lt; <span class="string">&quot;模&quot;</span> &lt;&lt; m &lt;&lt; <span class="string">&quot;的乘法逆元为：&quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="计算题">计算题</h1>
-<h2 id="第四章第1题">第四章第1题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为23是素数，由费马小定理得a^{22}\equiv1(mod\quad23)
-\\&amp;又由模指数运算和2019取模于22=17,可得
-\\&amp;a^{2019}\equiv a^{17}(mod\quad23)，即
-\\&amp;3^{2019}\equiv3^{17}(mod\quad23)
-\\&amp;因为3^3\equiv4(mod\quad23),3^{17}=3^3*3^3*3^3*3^3*3^3*3^2
-\\&amp;所以3^{17}\equiv4*4*4*4*4*9\equiv20(mod\quad23)
-\\&amp;所以 3^{2019}\quad mod\quad23=16
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第5题">第四章第5题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;因为13是素数，由费马小定理得a^{12}\equiv1(mod\quad13)
-\\&amp;又由模指数运算可得
-\\&amp;a^{60}\equiv a^{12}\equiv1(mod\quad13)，即
-\\&amp;2^{60}\equiv1(mod\quad13),3^{60}\equiv1(mod\quad13)
-\\&amp;因为2^{70}=2^{60}*2^{10},3^{70}=3^{60}*3^{10}
-\\&amp;因为2^{10}\equiv10(mod\quad13),3^{10}\equiv10(mod\quad13)
-\\&amp;所以2^{70}\equiv10(mod\quad13),3^{70}\equiv10(mod\quad13)
-\\&amp;又由模指数运算可得，
-\\&amp;2^{70}+3^{70}\equiv13\equiv0(mod\quad13)
-\\&amp;13整除2^{70}+3^{70}
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第6题">第四章第6题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;由欧拉定理
-\\&amp;因为gcd(2,55)=1，所以2^{\phi (55)}\equiv1(mod\quad55)
-\\&amp;因为55=5*11，所以\phi (55)=\phi (5)\phi (11)
-\\&amp;\phi (5)=4，\phi (11)=10
-\\&amp;所以\phi (55)=40，2^{40}\equiv1(mod\quad55)
-\\&amp;因为40整除100000，
-\\&amp;所以2^{100000}\equiv1(mod\quad55)
-\end{aligned}
-\]</span></p>
-<h2 id="第四章第8题">第四章第8题</h2>
-<p><span class="math display">\[
-\begin{aligned}
-\\&amp;求7^{1000}的最后两个数位，就是求7^{1000}(mod 100)
-\\&amp;由欧拉定理
-\\&amp;因为gcd(7,100)=1，所以7^{\phi (100)}\equiv1(mod\quad100)
-\\&amp;因为100=4*25，所以\phi (100)=\phi (4)\phi (25)
-\\&amp;\phi (25)=20，\phi (4)=2
-\\&amp;所以\phi (100)=40，7^{40}\equiv1(mod\quad100)
-\\&amp;因为40整除1000，
-\\&amp;所以7^{1000}\equiv1(mod\quad100)
-\\&amp;7^{1000}的最后两个数位是01
-\end{aligned}
-\]</span> ## 结语 <strong>我博客上第二个作业完成！</strong><br/></p>
 ]]></content>
       <tags>
         <tag>-作业</tag>
@@ -631,52 +631,6 @@ p)，则b也为QNR，(\frac{a}{p})=(\frac{b}{p})=-1
       </tags>
   </entry>
   <entry>
-    <title>信息安全数学基础</title>
-    <url>/2023/08/20/test-my-site/</url>
-    <content><![CDATA[<h2 id="绪论">绪论</h2>
-<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
-辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
-和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
-<h2 id="学习环境">学习环境</h2>
-<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
-是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
-直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
-<h2 id="课前预习">课前预习</h2>
-<p>1、在bilbil网站上有<strong><em><a
-href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
-2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
-3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
-<h2 id="学习过程">学习过程</h2>
-<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
-<ul>
-<li>第一部分：基础数论（第一到第五章）<br/>
-二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
-定理、EGCD、乘法逆元、消去<br/>
-律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
-<li>第二部分：基础群论（第六到第九章）<br/>
-群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
-Z</em>n。<br/></li>
-<li>第三部分：数论（第十到第十一章）<br/>
-中国剩余定理、二次剩余、二次互反律。<br/></li>
-<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
-等。<br/></li>
-<li>第五部分：椭圆曲线（第十四章）<br/>
-椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
-<li>第六部分：群算法（第十六、第十七章）<br/>
-大整数分解、离散对数求解。<br/>
-其中，第四部分和第五部分将会在大三继续学习。<br/></li>
-</ul>
-<h2 id="学科期望">学科期望</h2>
-<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
-<h2 id="结语">结语</h2>
-<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
-<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
-]]></content>
-      <tags>
-        <tag>-前言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第八次作业</title>
     <url>/2023/12/23/homework8/</url>
     <content><![CDATA[<h2 id="第十二章第1题">第十二章第1题</h2>
@@ -739,6 +693,52 @@ Z</em>n。<br/></li>
 ]]></content>
       <tags>
         <tag>-作业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息安全数学基础</title>
+    <url>/2023/08/20/test-my-site/</url>
+    <content><![CDATA[<h2 id="绪论">绪论</h2>
+<p>信息安全数学基础学习了信息安全领域中常见数学概念的定义与计算方法。包含近世代数、数论、数理逻<br/>
+辑部分。近世代数部分侧重于定义需要用到的概念和判别条件、数论部分侧重于各概念所引出的奇特性质<br/>
+和一些密码学算法、数理逻辑部分侧重思维模式的培养。<br/></p>
+<h2 id="学习环境">学习环境</h2>
+<p>教习这门课的老师是华南师范大学计算机学院的老师、也是我们的班主任——王立斌老师。这门课的教材也<br/>
+是他编写的《具体数论与代数》（CINTA）。后续学习过程中可能会用到github网站和Git软件等等资源。<br/>
+直接登入GitHub网站比较困难，会出现页面无法加载出来的情况，建议在电脑上配置一个加速器。<br/></p>
+<h2 id="课前预习">课前预习</h2>
+<p>1、在bilbil网站上有<strong><em><a
+href="https://www.bilibili.com/video/BV1xv4y1i7ki/?spm_id_from=333.337.search-card.all.click">斌头老师主讲的CINTA的导读课</a></em></strong>。建议课前看完这个视频。<br/>
+2、此外，老师在网站上发布了CINTA的电子版，可以下载下来提前学习。<br/>
+3、单纯看教材难以学下去的话，可以尝试bilbil网站上的网课。个人推荐哈尔滨工业大学韩琦老师的<br/>《信息安全数学基础》，但这个网课的内容顺序和教材不太一样，实际学习时要两者结合进行预习。<br/></p>
+<h2 id="学习过程">学习过程</h2>
+<p>参考斌头老师的导读课，可知未来学习课程的安排如下：<br/></p>
+<ul>
+<li>第一部分：基础数论（第一到第五章）<br/>
+二进制、整数的加法与乘法、除法定理、良序原则、模运算、GCD、Bezout
+定理、EGCD、乘法逆元、消去<br/>
+律、费马小定理、欧拉定理、欧拉函数、米勒拉宾算法等。<br/></li>
+<li>第二部分：基础群论（第六到第九章）<br/>
+群与子群、循环群、拉格朗日定理、商群、同构与同态、第一同构定理。需要特别关注两个群：Z<em>p和<br/>
+Z</em>n。<br/></li>
+<li>第三部分：数论（第十到第十一章）<br/>
+中国剩余定理、二次剩余、二次互反律。<br/></li>
+<li>第四部分：环与域（第十二到第十三章）<br/> 环、整环、有限域 GF(2n)
+等。<br/></li>
+<li>第五部分：椭圆曲线（第十四章）<br/>
+椭圆曲线理论基础，椭圆曲线的离散对数问题。<br/></li>
+<li>第六部分：群算法（第十六、第十七章）<br/>
+大整数分解、离散对数求解。<br/>
+其中，第四部分和第五部分将会在大三继续学习。<br/></li>
+</ul>
+<h2 id="学科期望">学科期望</h2>
+<p>这门课程在22级之前都是选修，今年突然成为了必修课，令人感到意外。并且这门课程难度不低，往年的<br/>考试成绩都是一片惨淡。这些条件确实能给我们带来一些压力，但有压力就会有动力。新学期我们需要在<br/>信息安全数学基础这门课上更加努力，更加用心。希望结业时我不但能取得满意的成绩，对一些网络安全<br/>的基础知识也有了一定的掌握。<br/></p>
+<h2 id="结语">结语</h2>
+<p>第一篇关于《信息安全的数学基础》的文章顺利完成！<br/>
+<strong>我博客上第一篇正式的文章完成！</strong><br/></p>
+]]></content>
+      <tags>
+        <tag>-前言</tag>
       </tags>
   </entry>
 </search>
